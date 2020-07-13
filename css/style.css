@@ -117,17 +117,172 @@
 
 
 /* container */
-#container{
-    padding: 200px 104px;
-    
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#container .inner-wrap{
+    padding-top: 200px;
+    width: 1230px;
+}
+
 #container .section__group{
     display: flex;
+    justify-content: space-between;
 }
-#container .section__group section{
-    flex: 2 1;
-    
+
+#container .section__top {
+    padding-bottom: 32px;
+    border-bottom: 4px solid #000;
 }
+
 #container .section__title{
-    font-size: 2rem;
+    font-size: 2.4rem;
+    line-height: 1.5;
+}
+
+#container .section__cnt{
+    padding-top: 64px;
+}
+
+
+/* what's on */
+#container .section__whats-on{
+    width: 800px;
+}
+.section__whats-on .section__top{
+    display: flex;
+    align-items: center;
+}
+.section__whats-on .section__top .section__top-box:nth-child(2) {
+    flex-grow: 1;
+    padding: 0 16px 0 60px;
+}
+.section__whats-on .section__top .section__top-box:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-left: 32px;
+    border-left: 1px solid #ddd;
+    line-height: 1.4;
+}
+.section__whats-on .section__top .section__title + p {
+    font-size: 1.2rem;
+    font-family: 'Open Sans';
+}
+.section__whats-on .lst-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section__whats-on .lst-tab__item .lst-tab__item-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 46px;
+    height: 86px;
+    border-radius: 23px;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans';
+    font-size: 0.7rem;
+    color: #999;
+}
+.section__whats-on .lst-tab__item.today .lst-tab__item-link{
+    border: 1px solid #000;
+}
+.section__whats-on .lst-tab__item .lst-tab__item-link .whats-on__calendar-week.week-holiday{
+    color: #f36464;
+}
+.section__whats-on .lst-tab__item .lst-tab__item-link .whats-on__calendar-date{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000;
+    padding-top: 9px;
+}
+.section__whats-on .lst-tab__item.day-off .lst-tab__item-link .whats-on__calendar-date{
+    color: #ccc;
+}
+.section__whats-on .lst-tab__item:hover .lst-tab__item-link{
+    background: #000;
+}
+.section__whats-on .lst-tab__item:hover .lst-tab__item-link .whats-on__calendar-date{
+    color: #fff;
+}
+
+.section__whats-on .section__cnt {
+    height: 1010px;
+    box-sizing: border-box;
+}
+
+/* space ・ culture */
+#container .section__space-culture{
+    width: 285px;
+}
+.section__space-culture .section__title{
+    font-size: 1.8rem;
+}
+#container .section__space-culture .section__cnt{
+    padding-top: 30px;
+}
+.section__space-culture .section__cnt .section__cnt-box + .section__cnt-box {
+    margin-top: 42px;
+}
+.section__space-culture .section__cnt .section__cnt-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.section__space-culture .section__cnt ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.section__space-culture .section__cnt ul li{
+    background: #F8F8F8;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 5px;  
+    transition: all .3s;
+}
+.section__space-culture .section__cnt ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+.section__space-culture .section__cnt ul li a img{
+    width: 110px;
+    height: auto;
+}
+.section__space-culture .section__cnt ul li a .img__logo-white{
+    display: none;
+}
+.section__space-culture .section__cnt ul li:hover {
+    background: #222;
+    transform: translate(-2px, -2px);
+    box-shadow: 0 30px 60px -60px rgba(50,50,93,.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+}
+.section__space-culture .section__cnt ul li:hover a .img__logo-dark{
+    display: none;
+}
+.section__space-culture .section__cnt ul li:hover a .img__logo-white{
+    display: block;
+}
+
+@media (max-width: 1230px ){
+    #container {
+        display: block;
+    }
+    #container .inner-wrap{
+        padding: 200px 30px;
+    }
 }
