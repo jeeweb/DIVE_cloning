@@ -22,6 +22,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 100
 }
 #header.header--fixed{
     border: 1px solid #000;
@@ -132,21 +133,29 @@
 #container .section__group{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 204px;
+    margin-bottom: 186px;
 }
-
-#container .section__top {
-    padding-bottom: 32px;
+.section__group .section__top{
     border-bottom: 4px solid #000;
+}
+#container .section__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
 }
 
 #container .section__title{
     font-size: 2.4rem;
     line-height: 1.5;
 }
-
-#container .section__cnt{
-    padding-top: 64px;
+.section__top .btn-more{
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+}
+.section__top .btn-more img{
+    padding-left: 8px;
 }
 
 
@@ -154,10 +163,7 @@
 #container .section__whats-on{
     width: 800px;
 }
-.section__whats-on .section__top{
-    display: flex;
-    align-items: center;
-}
+
 .section__whats-on .section__top .section__top-box:nth-child(2) {
     flex-grow: 1;
     padding: 0 16px 0 60px;
@@ -217,9 +223,18 @@
 .section__whats-on .lst-tab__item:hover .lst-tab__item-link .whats-on__calendar-date{
     color: #fff;
 }
+.section__whats-on .section__top-box .btn-more{
+    font-size: 1rem;
+    flex-direction: column;
+}
+.section__whats-on .section__top-box .btn-more img{
+    padding-bottom: 4px;
+    padding-left: 0;
+}
 
 .section__whats-on .section__cnt {
-    height: 1009px;
+    height: 943px;
+    margin-top: 64px;
     box-sizing: border-box;
     overflow: hidden;
     overflow-y: auto;
@@ -240,15 +255,16 @@
     width: 1px;
     background-color: #ccc;
 }
-.section__whats-on .section__cnt .section__event{
+.section__whats-on .section__cnt .section__activity{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 60px;
 }
-.section__whats-on .section__cnt .section__event .section__event-info{
+.section__whats-on .section__cnt .section__activity .section__activity-info{
     position: relative;
     padding-left: 46px;
 }
-.section__whats-on .section__cnt .section__event .section__event-info:before{
+.section__whats-on .section__cnt .section__activity .section__activity-info:before{
     content:"";
     position: absolute;
     top: 4px;
@@ -258,23 +274,23 @@
     border-radius: 50%;
     background-color: #000;
 }
-.section__whats-on .section__cnt .section__event .section__event-info .section__event-title{
+.section__whats-on .section__cnt .section__activity .section__activity-info .section__activity-title{
     display: block;
     font-size: 2.3rem;
     line-height: 1.4;
     padding: 24px 0;
 }
-.section__whats-on .section__cnt .section__event .section__event-info .section__event-desc{
+.section__whats-on .section__cnt .section__activity .section__activity-info .section__activity-desc{
     color: #999;
     padding-bottom: 32px;
 }
-.section__whats-on .section__cnt .section__event .section__event-info .section__event-space .section__event-reservation{
+.section__whats-on .section__cnt .section__activity .section__activity-info .section__activity-space .section__activity-reservation{
     position: relative;
     display: inline-block;
     color: #62BA47;
     padding-left: 26px;    
 }
-.section__whats-on .section__cnt .section__event .section__event-info .section__event-space .section__event-reservation:before{
+.section__whats-on .section__cnt .section__activity .section__activity-info .section__activity-space .section__activity-reservation:before{
     content:"";
     position: absolute;
     left: 13px;
@@ -284,10 +300,10 @@
     background: #ccc;
 }
 
-.section__whats-on .section__cnt .section__event .section__event-img{
+.section__whats-on .section__cnt .section__activity .section__activity-img{
     position: relative;
 }
-.section__whats-on .section__cnt .section__event .section__event-img .section__event-location{
+.section__whats-on .section__cnt .section__activity .section__activity-img .section__activity-location{
     position: absolute;
     top: 0;
     right: 0;
@@ -308,7 +324,7 @@
     font-size: 1.8rem;
 }
 #container .section__space-culture .section__cnt{
-    padding-top: 30px;
+    margin-top: 30px;
 }
 .section__space-culture .section__cnt .section__cnt-box + .section__cnt-box {
     margin-top: 42px;
@@ -359,11 +375,48 @@
 
 
 /* post */
-
+.section__post .section__cnt{
+    display: flex;
+}
+.section__post .section__cnt .section__cnt-box{
+    display: inline-block;
+    width: calc((100% - 90px) / 4); 
+}
+.section__post .section__cnt .section__cnt-box + .section__cnt-box{
+    margin-left: 30px;
+}
+.section__post .section__cnt .section__cnt-box img{
+    width: 100%;
+    height: auto;
+}
+.section__post .section__cnt .section__cnt-box .section__post-category{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 24px 0 6px;
+    font-size: 0.9rem;
+}
+.section__post .section__cnt .section__cnt-box .section__post-category:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000;
+}
+.section__post .section__cnt .section__cnt-box .section__post-title {
+    display: block;
+    font-size: 1.2rem;
+    padding: 28px 0 12px;
+}
+.section__post .section__cnt .section__cnt-box .section__post-desc{
+    color: #999;
+}
 
 /* Event */
 #container .section__event{
-    margin-top: 148px 0 128px;
+    margin: 148px 0 128px;
 }
 
 /* footer */
@@ -372,7 +425,7 @@
 }
 
 
-@media (max-width: 1230px ){
+@media (max-width: 1290px ){
     #container {
         display: block;
     }
@@ -381,7 +434,7 @@
         width: 100%;
     }
     .section__whats-on .section__cnt {
-        height: 751px;
+        height: 688px;
     }
 
     #container .section__space-culture{
