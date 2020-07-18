@@ -1,2 +1,41 @@
 @charset "UTF-8";
 
+#container.whats-on .section__top {
+    align-items: flex-end;
+    border-bottom: 1px solid #999;
+}
+#container.whats-on .section__title{
+    font-size: 2.8rem;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+.whats-on .section__top .lst-tab .lst-tab__item + .lst-tab__item{
+    padding-left: 38px;
+}
+.whats-on .section__top .lst-tab .lst-tab__item .lst-tab__item-link{
+    display: flex;
+    align-items: center;
+    color: #999;
+}
+.whats-on .section__top .lst-tab .lst-tab__item i{
+    font-size: 1.6rem;
+    padding-right: 10px;
+}
+.whats-on .section__top .lst-tab .lst-tab__item i.fas{
+    display: none;
+}
+.whats-on .section__top .lst-tab .lst-tab__item.on .lst-tab__item-link{
+    font-weight: 700;
+    color: #000;
+}
+.whats-on .section__top .lst-tab .lst-tab__item.on i.fas{
+    display: inline-block;
+}
+.whats-on .section__top .lst-tab .lst-tab__item.on i.far{
+    display: none;
+}
+
+
+.whats-on .section__cnt{
+    margin-top: 64px;
+}

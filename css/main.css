@@ -9,18 +9,7 @@
 .section__group .section__top{
     border-bottom: 4px solid #000;
 }
-#container .section__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 32px;
-}
 
-#container .section__title{
-    font-size: 2.6rem;
-    line-height: 1.5;
-    font-weight: 500;
-}
 .section__top .btn-more{
     font-size: 1.15rem;
     display: flex;
@@ -48,15 +37,6 @@
     padding-left: 32px;
     border-left: 1px solid #ddd;
     line-height: 1.4;
-}
-.section__whats-on .section__top .section__title + p {
-    font-size: 1.2rem;
-    /* font-family: 'Noto Sans KR'; */
-}
-.section__whats-on .lst-tab {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .section__whats-on .lst-tab__item .lst-tab__item-link{
