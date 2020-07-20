@@ -4,38 +4,107 @@
     align-items: flex-end;
     border-bottom: 1px solid #999;
 }
-#container.whats-on .section__title{
+
+#container.whats-on .section__title {
     font-size: 2.8rem;
     padding-bottom: 10px;
     font-weight: 700;
 }
-.whats-on .section__top .lst-tab .lst-tab__item + .lst-tab__item{
+
+.whats-on .section__top .lst-tab .lst-tab__item+.lst-tab__item {
     padding-left: 38px;
 }
-.whats-on .section__top .lst-tab .lst-tab__item .lst-tab__item-link{
+
+.whats-on .section__top .lst-tab .lst-tab__item .lst-tab__item-link {
     display: flex;
     align-items: center;
     color: #999;
 }
-.whats-on .section__top .lst-tab .lst-tab__item i{
+
+.whats-on .section__top .lst-tab .lst-tab__item i {
     font-size: 1.6rem;
     padding-right: 10px;
 }
-.whats-on .section__top .lst-tab .lst-tab__item i.fas{
+
+.whats-on .section__top .lst-tab .lst-tab__item i.fas {
     display: none;
 }
-.whats-on .section__top .lst-tab .lst-tab__item.on .lst-tab__item-link{
+
+.whats-on .section__top .lst-tab .lst-tab__item.on .lst-tab__item-link {
     font-weight: 700;
     color: #000;
 }
-.whats-on .section__top .lst-tab .lst-tab__item.on i.fas{
+
+.whats-on .section__top .lst-tab .lst-tab__item.on i.fas {
     display: inline-block;
 }
-.whats-on .section__top .lst-tab .lst-tab__item.on i.far{
+
+.whats-on .section__top .lst-tab .lst-tab__item.on i.far {
     display: none;
 }
 
+.whats-on .section__cnt {
+    margin-top: 52px;
+}
 
-.whats-on .section__cnt{
-    margin-top: 64px;
+.whats-on .section__cnt .lst-tab__cnt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.whats-on .section__cnt .lst-tab__cnt .section__monthly-lst {
+    flex: 2 1 0;
+}
+
+.whats-on .section__cnt .lst-tab__cnt .section__monthly-calendar {
+    flex: 1 1 0;
+    margin-left: 64px;
+}
+
+.whats-on .section__cnt .lst-tab__cnt article {
+    margin-bottom: 84px;
+}
+
+.whats-on .section__cnt .lst-tab__cnt .section__sub-title {
+    font-size: 2rem;
+    margin-bottom: 36px;
+}
+
+.whats-on .section__cnt .lst-tab__cnt .monthly-lst__now .no-program {
+    display: none
+}
+
+.whats-on .section__cnt .lst-tab__cnt .monthly-lst__now.none .no-program {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    color: #999;
+}
+
+.whats-on .section__cnt .lst-tab__cnt .monthly-lst__now.none .section__cnt-wrap::before {
+    height: 0;
+}
+
+.whats-on .section__cnt .lst-tab__cnt .monthly-lst__now.none .section__activity {
+    display: none;
+}
+
+.whats-on .section__cnt .section__activity .section__activity-info .section__activity-title {
+    font-size: 1.4rem;
+    padding: 12px 0;
+}
+
+.whats-on .section__cnt .section__activity .section__activity-info .section__activity-desc {
+    padding-bottom: 18px;
+}
+
+.whats-on .section__cnt .section__activity .section__activity-img {
+    height: 210px;
+}
+
+.whats-on .section__cnt .section__activity .section__activity-img .section__activity-location {
+    width: 64px;
+    height: 32px;
+    line-height: 32px;
 }
