@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+.whats-on__wrapper #header {
+  border-bottom: 1px solid #000;
+}
 #container.whats-on .section__top {
   align-items: flex-end;
   border-bottom: 1px solid #999;
@@ -129,6 +132,11 @@
   line-height: 32px;
 }
 
+#programCalendar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 148px;
+}
 #programCalendar .ui-datepicker-header {
   display: flex;
   align-items: center;
