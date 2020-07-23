@@ -50,7 +50,8 @@
   margin-top: 52px;
 }
 
-.whats-on .section__cnt .lst-tab__cnt {
+/* 캘린더 */
+.whats-on .section__cnt .lst-tab__calendar {
   display: flex;
   justify-content: space-between;
 }
@@ -183,7 +184,7 @@
 }
 #programCalendar .ui-datepicker-calendar tbody td {
   position: relative;
-  height: 74px;
+  height: 70px;
 }
 #programCalendar .ui-datepicker-calendar .ui-state-default {
   display: block;
@@ -208,4 +209,46 @@
   height: 4px;
   background-color: #000;
   border-radius: 50%;
+}
+
+/* 지역 */
+.whats-on .section__cnt .lst-tab__calendar {
+  display: none;
+}
+.section__cnt .section__place .section__activity {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.section__cnt .section__place .section__activity + .section__activity {
+  margin-left: 1vw;
+}
+.section__cnt .section__place .section__cnt-wrap:before {
+  height: 0;
+}
+.section__cnt .section__place .section__activity .section__activity-info {
+  padding-left: 0;
+}
+
+.section__cnt
+  .section__place
+  .section__activity
+  .section__activity-info:before {
+  width: 0;
+  height: 0;
+}
+.section__cnt .section__place .section__cnt-wrap {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section__cnt .section__place .section__activity .section__activity-img {
+}
+.lst-tab__places .section__filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.lst-tab__places .section__filter li + li {
+  margin-left: 36px;
 }
