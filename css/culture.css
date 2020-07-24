@@ -215,6 +215,27 @@
 .whats-on .section__cnt .lst-tab__calendar {
   display: none;
 }
+
+.lst-tab__places .section__filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.lst-tab__places .section__filter li + li {
+  margin-left: 36px;
+}
+.lst-tab__places .section__filter li a i {
+  padding-right: 8px;
+}
+.lst-tab__places .section__place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lst-tab__places .section__place .section__sub-title {
+  align-self: flex-start;
+}
 .section__cnt .section__place .section__activity {
   flex-direction: column;
   justify-content: flex-start;
@@ -241,14 +262,30 @@
   justify-content: space-between;
 }
 
-.section__cnt .section__place .section__activity .section__activity-img {
+.section__cnt .section__place .section__activity img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
 }
-.lst-tab__places .section__filter {
+.section__cnt
+  .section__place
+  .section__activity
+  .section__activity-info
+  .section__activity-title {
+  font-size: 1.2rem;
+}
+.section__cnt .section__place .btn-more-activity {
+  border: 1px solid #000;
+  border-radius: 4px;
+  width: 390px;
+  height: 60px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  font-size: 1.1rem;
 }
-.lst-tab__places .section__filter li + li {
-  margin-left: 36px;
+.section__cnt .section__place .btn-more-activity:hover {
+  background-color: #f2f2f2;
+}
+.section__cnt .section__place .btn-more-activity i {
+  padding-left: 8px;
 }
