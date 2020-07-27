@@ -15,13 +15,18 @@
   </head>
 
   <body>
-    <div id="wrap" class="whats-on__wrapper">
+    <div id="wrap" class="space__wrapper">
       <header id="header">
         <div class="header__nav">
           <h1 class="header__logo">
-            <a href="index.html" class="header__logo-link"
-              ><img src="images/common/logo-dive-b.svg" alt=""
-            /></a>
+            <a href="index.html" class="header__logo-link header--scroll">
+              <img
+                src="images/common/logo-dive-w.svg"
+                class="scroll--show"
+                alt=""
+              />
+              <img src="images/common/logo-dive-b.svg" alt="" />
+            </a>
           </h1>
           <nav id="gnb">
             <ul class="lst-gnb">
@@ -31,8 +36,13 @@
                 </a>
               </li>
               <li class="lst-gnb__item">
-                <a href="#" class="lst-gnb__item-link">
+                <a href="#" class="lst-gnb__item-link header--scroll">
                   <span class="lst-gnb__item-txt">Space</span>
+                  <img
+                    src="images/common/ico-arr-w.svg"
+                    alt="서브메뉴보기"
+                    class="icon-arrow scroll--show"
+                  />
                   <img
                     src="images/common/ico-arr-b.svg"
                     alt="서브메뉴보기"
@@ -81,8 +91,13 @@
                 </ul>
               </li>
               <li class="lst-gnb__item">
-                <a href="#" class="lst-gnb__item-link">
+                <a href="#" class="lst-gnb__item-link header--scroll">
                   <span class="lst-gnb__item-txt">Culture</span>
+                  <img
+                    src="images/common/ico-arr-w.svg"
+                    alt="서브메뉴보기"
+                    class="icon-arrow scroll--show"
+                  />
                   <img
                     src="images/common/ico-arr-b.svg"
                     alt="서브메뉴보기"
@@ -115,9 +130,14 @@
             </ul>
           </nav>
         </div>
-        <a href="#" class="btn__search"
-          ><img src="images/common/ico-search-b.svg" alt="검색"
-        /></a>
+        <a href="#" class="btn__search header--scroll">
+          <img
+            src="images/common/ico-search-w.png"
+            class="scroll--show"
+            alt="검색"
+          />
+          <img src="images/common/ico-search-b.svg" alt="검색" />
+        </a>
         <div class="header__search">
           <form>
             <input type="text" placeholder="검색어를 입력해 주세요" />
@@ -131,9 +151,9 @@
         </div>
       </header>
 
-      <div id="container" class="whats-on">
-        <div class="inner-wrap">
-          <section class="section__top">
+      <div id="container" class="design-library">
+        <section class="section__top">
+          <div class="inner-wrap">
             <div class="section__top-box">
               <h2 class="section__title-logo">
                 <img
@@ -144,7 +164,7 @@
               <h3 class="section__title">
                 시대를 초월한<br />디자인과의<br />조우
               </h3>
-              <a href="#">공간 알아보기</a>
+              <a href="#" class="link__space-info">공간 알아보기</a>
             </div>
             <div class="section__top-box">
               <p class="space-info__thumb">
@@ -154,7 +174,9 @@
                 <span>운영시간</span>화-토 12~21시, 일/공휴일 12~18시
               </p>
             </div>
-          </section>
+          </div>
+        </section>
+        <div class="inner-wrap">
           <section class="section__cnt"></section>
         </div>
       </div>
