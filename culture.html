@@ -1,590 +1,494 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/642e975ea7.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <title>What's on | 현대카드 DIVE</title>
-  </head>
 
-  <body>
-    <div id="wrap" class="whats-on__wrapper">
-      <header id="header">
-        <div class="header__nav">
-          <h1 class="header__logo">
-            <a href="index.html" class="header__logo-link"
-              ><img src="images/common/logo-dive-b.svg" alt=""
-            /></a>
-          </h1>
-          <nav id="gnb">
-            <ul class="lst-gnb">
-              <li class="lst-gnb__item">
-                <a href="culture.html" class="lst-gnb__item-link">
-                  <span class="lst-gnb__item-txt">What's on</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/common/favicon.ico">
+  <script src="https://kit.fontawesome.com/642e975ea7.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/calendar.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <title>What's on | 현대카드 DIVE</title>
+</head>
+
+<body id="culture">
+  <div id="wrap" class="whats-on__wrapper">
+    <header id="header">
+      <div class="header__nav">
+        <h1 class="header__logo">
+          <a href="index.html" class="header__logo-link"><img src="images/common/logo-dive-b.svg" alt="" /></a>
+        </h1>
+        <nav id="gnb">
+          <ul class="lst-gnb">
+            <li class="lst-gnb__item">
+              <a href="culture.html" class="lst-gnb__item-link">
+                <span class="lst-gnb__item-txt">What's on</span>
+              </a>
+            </li>
+            <li class="lst-gnb__item">
+              <a href="#" class="lst-gnb__item-link">
+                <span class="lst-gnb__item-txt">Space</span>
+                <img src="images/common/ico-arr-b.svg" alt="서브메뉴보기" class="icon-arrow" />
+              </a>
+              <ul class="lst-gnb-sub">
+                <li class="lst-gnb-sub__item">
+                  <a href="design-library.html" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">DESIGN LIBRARY</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">TRAVEL LIBRARY</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">MUSIC LIBRARY</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">COOKING LIBRARY</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">UNDERSTAGE</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">VINYL & PLASTIC</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">STORAGE</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="lst-gnb__item">
+              <a href="#" class="lst-gnb__item-link">
+                <span class="lst-gnb__item-txt">Culture</span>
+                <img src="images/common/ico-arr-b.svg" alt="서브메뉴보기" class="icon-arrow" />
+              </a>
+              <ul class="lst-gnb-sub">
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">SUPER CONCERT</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">DAVINCI MOTEL</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">CURTURE PROJECT</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="lst-gnb__item">
+              <a href="#" class="lst-gnb__item-link">
+                <span class="lst-gnb__item-txt">Post</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a href="#" class="btn__search"><img src="images/common/ico-search-b.svg" alt="검색" /></a>
+      <div class="header__search">
+        <form>
+          <input type="text" placeholder="검색어를 입력해 주세요" />
+          <button type="button" class="btn__cancle"></button>
+          <button class="search-btn__search">
+            <img src="images/common/ico-search-b.svg" alt="검색" />
+          </button>
+        </form>
+        <p class="message__recent-search">최근 검색어 내역이 없습니다.</p>
+        <button type="button" class="btn__close"></button>
+      </div>
+    </header>
+
+    <div id="container" class="whats-on">
+      <div class="inner-wrap">
+        <section class="section__top">
+          <div class="section__top-box">
+            <h2 class="section__title">What's on</h2>
+            <p>현대카드 컬처소식을 가장 빠르게 DIVE</p>
+          </div>
+          <div class="section__top-box">
+            <ul class="lst-tab culture__sort">
+              <li class="lst-tab__item culture__sort-calendar on">
+                <a href="#" class="lst-tab__item-link">
+                  <i class="far fa-calendar"></i>
+                  <i class="fas fa-calendar"></i>
+                  <span class="lst-tab__item-txt">캘린더</span>
                 </a>
               </li>
-              <li class="lst-gnb__item">
-                <a href="#" class="lst-gnb__item-link">
-                  <span class="lst-gnb__item-txt">Space</span>
-                  <img
-                    src="images/common/ico-arr-b.svg"
-                    alt="서브메뉴보기"
-                    class="icon-arrow"
-                  />
-                </a>
-                <ul class="lst-gnb-sub">
-                  <li class="lst-gnb-sub__item">
-                    <a
-                      href="design-library.html"
-                      class="lst-gnb-sub__item-link"
-                    >
-                      <span class="lst-gnb-sub__item-txt">DESIGN LIBRARY</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">TRAVEL LIBRARY</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">MUSIC LIBRARY</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">COOKING LIBRARY</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">UNDERSTAGE</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">VINYL & PLASTIC</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">STORAGE</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="lst-gnb__item">
-                <a href="#" class="lst-gnb__item-link">
-                  <span class="lst-gnb__item-txt">Culture</span>
-                  <img
-                    src="images/common/ico-arr-b.svg"
-                    alt="서브메뉴보기"
-                    class="icon-arrow"
-                  />
-                </a>
-                <ul class="lst-gnb-sub">
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">SUPER CONCERT</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">DAVINCI MOTEL</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">CURTURE PROJECT</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="lst-gnb__item">
-                <a href="#" class="lst-gnb__item-link">
-                  <span class="lst-gnb__item-txt">Post</span>
+              <li class="lst-tab__item culture__sort-places">
+                <a href="#" class="lst-tab__item-link">
+                  <i class="far fa-map"></i>
+                  <i class="fas fa-map"></i>
+                  <span class="lst-tab__item-txt">지역</span>
                 </a>
               </li>
             </ul>
-          </nav>
-        </div>
-        <a href="#" class="btn__search"
-          ><img src="images/common/ico-search-b.svg" alt="검색"
-        /></a>
-        <div class="header__search">
-          <form>
-            <input type="text" placeholder="검색어를 입력해 주세요" />
-            <button type="button" class="btn__cancle"></button>
-            <button class="search-btn__search">
-              <img src="images/common/ico-search-b.svg" alt="검색" />
-            </button>
-          </form>
-          <p class="message__recent-search">최근 검색어 내역이 없습니다.</p>
-          <button type="button" class="btn__close"></button>
-        </div>
-      </header>
-
-      <div id="container" class="whats-on">
-        <div class="inner-wrap">
-          <section class="section__top">
-            <div class="section__top-box">
-              <h2 class="section__title">What's on</h2>
-              <p>현대카드 컬처소식을 가장 빠르게 DIVE</p>
-            </div>
-            <div class="section__top-box">
-              <ul class="lst-tab culture__sort">
-                <li class="lst-tab__item culture__sort-calendar on">
-                  <a href="#" class="lst-tab__item-link">
-                    <i class="far fa-calendar"></i>
-                    <i class="fas fa-calendar"></i>
-                    <span class="lst-tab__item-txt">캘린더</span>
-                  </a>
-                </li>
-                <li class="lst-tab__item culture__sort-places">
-                  <a href="#" class="lst-tab__item-link">
-                    <i class="far fa-map"></i>
-                    <i class="fas fa-map"></i>
-                    <span class="lst-tab__item-txt">지역</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section class="section__cnt">
-            <div class="lst-tab__cnt lst-tab__calendar">
-              <div class="section__monthly-lst">
-                <article class="monthly-lst__now">
-                  <h3 class="section__sub-title">Now</h3>
-                  <div class="section__cnt-wrap">
-                    <p class="no-program">
-                      선택하신 날짜에는 프로그램이 없습니다.
-                    </p>
-                    <a href="#" class="section__activity">
-                      <div class="section__activity-info">
-                        <p class="section__activity-period">07/16(목)</p>
-                        <strong class="section__activity-title"
-                          >위스키 끝파왕, 버번을 만나다</strong
-                        >
-                        <p class="section__activity-desc">
-                          버번 위스키 테이스팅 클래스
-                        </p>
-                        <p class="section__activity-space">
-                          쿠킹 라이브러리<span
-                            class="section__activity-reservation"
-                            >예약</span
-                          >
-                        </p>
-                      </div>
-                      <div class="section__activity-img">
-                        <img src="images/main/activity8.jpg" alt="" />
-                        <span class="section__activity-location">청담</span>
-                      </div>
-                    </a>
-                    <a href="#" class="section__activity">
-                      <div class="section__activity-info">
-                        <p class="section__activity-period">
-                          07/15(수) ~ 07/21(화)
-                        </p>
-                        <strong class="section__activity-title"
-                          >듀스 한정판 LP 리마스터링 버전</strong
-                        >
-                        <p class="section__activity-desc">Limited Vinyl Club</p>
-                        <p class="section__activity-space">
-                          바이닐앤플라스틱<span
-                            class="section__activity-reservation"
-                            >예약</span
-                          >
-                        </p>
-                      </div>
-                      <div class="section__activity-img">
-                        <img src="images/main/activity7.jpg" alt="" />
-                        <span class="section__activity-location">이태원</span>
-                      </div>
-                    </a>
-                    <a href="#" class="section__activity">
-                      <div class="section__activity-info">
-                        <p class="section__activity-period">
-                          07/15(수) ~ 10/11(일)
-                        </p>
-                        <strong class="section__activity-title"
-                          >Lucky DIVE 오스제미오스 인증샷!</strong
-                        >
-                        <p class="section__activity-desc">
-                          전시 인증샷 보여주고 선물 뽑자!
-                        </p>
-                        <p class="section__activity-space">스토리지</p>
-                      </div>
-                      <div class="section__activity-img">
-                        <img src="images/main/activity6.jpg" alt="" />
-                        <span class="section__activity-location">이태원</span>
-                      </div>
-                    </a>
-                    <a href="#" class="section__activity">
-                      <div class="section__activity-info">
-                        <p class="section__activity-period">
-                          07/15(수) ~ 10/11(일)
-                        </p>
-                        <strong class="section__activity-title"
-                          >초현실적 환상 세계로의 초대</strong
-                        >
-                        <p class="section__activity-desc">
-                          오스제미오스 국내 최초 개인전 오픈!
-                        </p>
-                        <p class="section__activity-space">
-                          스토리지<span class="section__activity-reservation"
-                            >예약</span
-                          >
-                        </p>
-                      </div>
-                      <div class="section__activity-img">
-                        <img src="images/main/activity5.jpg" alt="" />
-                        <span class="section__activity-location">이태원</span>
-                      </div>
-                    </a>
-                  </div>
-                </article>
-                <article class="monthly-lst__upcoming">
-                  <h3 class="section__sub-title">Upcoming</h3>
-                  <div class="section__cnt-wrap"></div>
-                </article>
-                <article class="monthly-lst__past">
-                  <h3 class="section__sub-title">Past</h3>
-                  <div class="section__cnt-wrap">
-                    <a href="#" class="section__activity">
-                      <div class="section__activity-info">
-                        <p class="section__activity-period">07/08(수)</p>
-                        <strong class="section__activity-title"
-                          >여름밤 스위스 여행</strong
-                        >
-                        <p class="section__activity-desc">
-                          스위스 전문 가이드 서찬수의 트래블 토크
-                        </p>
-                        <p class="section__activity-space">
-                          트래블 라이브러리<span
-                            class="section__activity-reservation"
-                            >예약</span
-                          >
-                        </p>
-                      </div>
-                      <div class="section__activity-img">
-                        <img src="images/main/activity4.jpg" alt="" />
-                        <span class="section__activity-location">청담</span>
-                      </div>
-                    </a>
-                    <a href="#" class="section__activity">
-                      <div class="section__activity-info">
-                        <p class="section__activity-period">07/04(토)</p>
-                        <strong class="section__activity-title"
-                          >시장 가는 즐거움</strong
-                        >
-                        <p class="section__activity-desc">
-                          쿠킹 라이브러리 X 마르쉐 파머스 마켓
-                        </p>
-                        <p class="section__activity-space">쿠킹 라이브러리</p>
-                      </div>
-                      <div class="section__activity-img">
-                        <img src="images/main/activity3.jpg" alt="" />
-                        <span class="section__activity-location">청담</span>
-                      </div>
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <div class="section__monthly-calendar">
-                <div class="section__calendar" id="programCalendar"></div>
-              </div>
-            </div>
-            <div class="lst-tab__cnt lst-tab__places">
-              <ul class="section__filter">
-                <li>
-                  <a href="#">
-                    <i class="fas fa-filter"></i>
-                    <span>전체</span>
-                  </a>
-                </li>
-                <li>
-                  <label for="reservation">예매/예약 필요</label>
-                  <input
-                    type="checkbox"
-                    id="reservation"
-                    name="reservationYn"
-                    value="N"
-                  />
-                </li>
-              </ul>
-              <article class="section__place">
-                <h3 class="section__sub-title">이태원</h3>
+          </div>
+        </section>
+        <section class="section__cnt">
+          <div class="lst-tab__cnt lst-tab__calendar">
+            <div class="section__monthly-lst">
+              <article class="monthly-lst__now">
+                <h3 class="section__sub-title">Now</h3>
                 <div class="section__cnt-wrap">
+                  <p class="no-program">
+                    선택하신 날짜에는 프로그램이 없습니다.
+                  </p>
                   <a href="#" class="section__activity">
                     <div class="section__activity-info">
-                      <img src="images/main/activity7.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/15(수) ~ 07/21(화)
-                      </p>
-                      <strong class="section__activity-title"
-                        >듀스 한정판 LP 리마스터링 버전</strong
-                      >
-                      <p class="section__activity-desc">Limited Vinyl Club</p>
-                      <p class="section__activity-space">
-                        바이닐앤플라스틱<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity6.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/15(수) ~ 10/11(일)
-                      </p>
-                      <strong class="section__activity-title"
-                        >Lucky DIVE 오스제미오스 인증샷!</strong
-                      >
-                      <p class="section__activity-desc">
-                        전시 인증샷 보여주고 선물뽑자!
-                      </p>
-                      <p class="section__activity-space">
-                        스토리지
-                      </p>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity5.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/15(수) ~ 10/11(일)
-                      </p>
-                      <strong class="section__activity-title"
-                        >초현실적 환상 세계로의 초대</strong
-                      >
-                      <p class="section__activity-desc">
-                        오스제미오스 국내 최초 개인전 오픈
-                      </p>
-                      <p class="section__activity-space">
-                        스토리지<span class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity7.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/15(수) ~ 07/21(화)
-                      </p>
-                      <strong class="section__activity-title"
-                        >듀스 한정판 LP 리마스터링 버전</strong
-                      >
-                      <p class="section__activity-desc">Limited Vinyl Club</p>
-                      <p class="section__activity-space">
-                        바이닐앤플라스틱<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <button type="button" class="btn-more-activity">
-                  더 보기<i class="fas fa-plus"></i>
-                </button>
-              </article>
-              <article class="section__place">
-                <h3 class="section__sub-title">청담</h3>
-                <div class="section__cnt-wrap">
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity9.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/24(금)
-                      </p>
-                      <strong class="section__activity-title"
-                        >낯선 곳에 나를 잠시 묶어둔 여름</strong
-                      >
-                      <p class="section__activity-desc">
-                        여름밤, 이병률 작가의 시 낭독회
-                      </p>
-                      <p class="section__activity-space">
-                        트래블 라이브러리<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity8.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/16(목)
-                      </p>
-                      <strong class="section__activity-title"
-                        >위스키 끝판왕, 버번을 만나다</strong
-                      >
+                      <p class="section__activity-period">07/16(목)</p>
+                      <strong class="section__activity-title">위스키 끝파왕, 버번을 만나다</strong>
                       <p class="section__activity-desc">
                         버번 위스키 테이스팅 클래스
                       </p>
                       <p class="section__activity-space">
-                        쿠킹 라이브러리<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
+                        쿠킹 라이브러리<span class="section__activity-reservation">예약</span>
                       </p>
+                    </div>
+                    <div class="section__activity-img">
+                      <img src="images/main/activity8.jpg" alt="" />
+                      <span class="section__activity-location">청담</span>
                     </div>
                   </a>
                   <a href="#" class="section__activity">
                     <div class="section__activity-info">
-                      <img src="images/main/activity4.jpg" alt="" />
                       <p class="section__activity-period">
-                        07/08(수)
+                        07/15(수) ~ 07/21(화)
                       </p>
-                      <strong class="section__activity-title"
-                        >여름밤 스위스 여행</strong
-                      >
+                      <strong class="section__activity-title">듀스 한정판 LP 리마스터링 버전</strong>
+                      <p class="section__activity-desc">Limited Vinyl Club</p>
+                      <p class="section__activity-space">
+                        바이닐앤플라스틱<span class="section__activity-reservation">예약</span>
+                      </p>
+                    </div>
+                    <div class="section__activity-img">
+                      <img src="images/main/activity7.jpg" alt="" />
+                      <span class="section__activity-location">이태원</span>
+                    </div>
+                  </a>
+                  <a href="#" class="section__activity">
+                    <div class="section__activity-info">
+                      <p class="section__activity-period">
+                        07/15(수) ~ 10/11(일)
+                      </p>
+                      <strong class="section__activity-title">Lucky DIVE 오스제미오스 인증샷!</strong>
+                      <p class="section__activity-desc">
+                        전시 인증샷 보여주고 선물 뽑자!
+                      </p>
+                      <p class="section__activity-space">스토리지</p>
+                    </div>
+                    <div class="section__activity-img">
+                      <img src="images/main/activity6.jpg" alt="" />
+                      <span class="section__activity-location">이태원</span>
+                    </div>
+                  </a>
+                  <a href="#" class="section__activity">
+                    <div class="section__activity-info">
+                      <p class="section__activity-period">
+                        07/15(수) ~ 10/11(일)
+                      </p>
+                      <strong class="section__activity-title">초현실적 환상 세계로의 초대</strong>
+                      <p class="section__activity-desc">
+                        오스제미오스 국내 최초 개인전 오픈!
+                      </p>
+                      <p class="section__activity-space">
+                        스토리지<span class="section__activity-reservation">예약</span>
+                      </p>
+                    </div>
+                    <div class="section__activity-img">
+                      <img src="images/main/activity5.jpg" alt="" />
+                      <span class="section__activity-location">이태원</span>
+                    </div>
+                  </a>
+                </div>
+              </article>
+              <article class="monthly-lst__upcoming">
+                <h3 class="section__sub-title">Upcoming</h3>
+                <div class="section__cnt-wrap"></div>
+              </article>
+              <article class="monthly-lst__past">
+                <h3 class="section__sub-title">Past</h3>
+                <div class="section__cnt-wrap">
+                  <a href="#" class="section__activity">
+                    <div class="section__activity-info">
+                      <p class="section__activity-period">07/08(수)</p>
+                      <strong class="section__activity-title">여름밤 스위스 여행</strong>
                       <p class="section__activity-desc">
                         스위스 전문 가이드 서찬수의 트래블 토크
                       </p>
                       <p class="section__activity-space">
-                        트래블 라이브러리<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
+                        트래블 라이브러리<span class="section__activity-reservation">예약</span>
                       </p>
+                    </div>
+                    <div class="section__activity-img">
+                      <img src="images/main/activity4.jpg" alt="" />
+                      <span class="section__activity-location">청담</span>
                     </div>
                   </a>
                   <a href="#" class="section__activity">
                     <div class="section__activity-info">
-                      <img src="images/main/activity3.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/04(토)
-                      </p>
-                      <strong class="section__activity-title"
-                        >시장 가는 즐거움</strong
-                      >
+                      <p class="section__activity-period">07/04(토)</p>
+                      <strong class="section__activity-title">시장 가는 즐거움</strong>
                       <p class="section__activity-desc">
                         쿠킹 라이브러리 X 마르쉐 파머스 마켓
                       </p>
-                      <p class="section__activity-space">
-                        쿠킹 라이브러리
-                      </p>
+                      <p class="section__activity-space">쿠킹 라이브러리</p>
+                    </div>
+                    <div class="section__activity-img">
+                      <img src="images/main/activity3.jpg" alt="" />
+                      <span class="section__activity-location">청담</span>
                     </div>
                   </a>
                 </div>
-                <button type="button" class="btn-more-activity">
-                  더 보기<i class="fas fa-plus"></i>
-                </button>
-              </article>
-              <article class="section__place">
-                <h3 class="section__sub-title">가회</h3>
-                <div class="section__cnt-wrap">
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity7.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/15(수) ~ 07/21(화)
-                      </p>
-                      <strong class="section__activity-title"
-                        >듀스 한정판 LP 리마스터링 버전</strong
-                      >
-                      <p class="section__activity-desc">Limited Vinyl Club</p>
-                      <p class="section__activity-space">
-                        바이닐앤플라스틱<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity6.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/15(수) ~ 10/11(일)
-                      </p>
-                      <strong class="section__activity-title"
-                        >Lucky DIVE 오스제미오스 인증샷!</strong
-                      >
-                      <p class="section__activity-desc">
-                        전시 인증샷 보여주고 선물뽑자!
-                      </p>
-                      <p class="section__activity-space">
-                        스토리지
-                      </p>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity5.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/15(수) ~ 10/11(일)
-                      </p>
-                      <strong class="section__activity-title"
-                        >초현실적 환상 세계로의 초대</strong
-                      >
-                      <p class="section__activity-desc">
-                        오스제미오스 국내 최초 개인전 오픈
-                      </p>
-                      <p class="section__activity-space">
-                        스토리지<span class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <img src="images/main/activity7.jpg" alt="" />
-                      <p class="section__activity-period">
-                        07/15(수) ~ 07/21(화)
-                      </p>
-                      <strong class="section__activity-title"
-                        >듀스 한정판 LP 리마스터링 버전</strong
-                      >
-                      <p class="section__activity-desc">Limited Vinyl Club</p>
-                      <p class="section__activity-space">
-                        바이닐앤플라스틱<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                <button type="button" class="btn-more-activity">
-                  더 보기<i class="fas fa-plus"></i>
-                </button>
               </article>
             </div>
-          </section>
-        </div>
+            <div class="section__monthly-calendar">
+              <div class="section__calendar" id="programCalendar"></div>
+            </div>
+          </div>
+          <div class="lst-tab__cnt lst-tab__places">
+            <ul class="section__filter">
+              <li>
+                <a href="#">
+                  <i class="fas fa-filter"></i>
+                  <span>전체</span>
+                </a>
+              </li>
+              <li>
+                <label for="reservation">예매/예약 필요</label>
+                <input type="checkbox" id="reservation" name="reservationYn" value="N" />
+              </li>
+            </ul>
+            <article class="section__place">
+              <h3 class="section__sub-title">이태원</h3>
+              <div class="section__cnt-wrap">
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity7.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/15(수) ~ 07/21(화)
+                    </p>
+                    <strong class="section__activity-title">듀스 한정판 LP 리마스터링 버전</strong>
+                    <p class="section__activity-desc">Limited Vinyl Club</p>
+                    <p class="section__activity-space">
+                      바이닐앤플라스틱<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity6.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/15(수) ~ 10/11(일)
+                    </p>
+                    <strong class="section__activity-title">Lucky DIVE 오스제미오스 인증샷!</strong>
+                    <p class="section__activity-desc">
+                      전시 인증샷 보여주고 선물뽑자!
+                    </p>
+                    <p class="section__activity-space">
+                      스토리지
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity5.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/15(수) ~ 10/11(일)
+                    </p>
+                    <strong class="section__activity-title">초현실적 환상 세계로의 초대</strong>
+                    <p class="section__activity-desc">
+                      오스제미오스 국내 최초 개인전 오픈
+                    </p>
+                    <p class="section__activity-space">
+                      스토리지<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity7.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/15(수) ~ 07/21(화)
+                    </p>
+                    <strong class="section__activity-title">듀스 한정판 LP 리마스터링 버전</strong>
+                    <p class="section__activity-desc">Limited Vinyl Club</p>
+                    <p class="section__activity-space">
+                      바이닐앤플라스틱<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <button type="button" class="btn-more-activity">
+                더 보기<i class="fas fa-plus"></i>
+              </button>
+            </article>
+            <article class="section__place">
+              <h3 class="section__sub-title">청담</h3>
+              <div class="section__cnt-wrap">
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity9.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/24(금)
+                    </p>
+                    <strong class="section__activity-title">낯선 곳에 나를 잠시 묶어둔 여름</strong>
+                    <p class="section__activity-desc">
+                      여름밤, 이병률 작가의 시 낭독회
+                    </p>
+                    <p class="section__activity-space">
+                      트래블 라이브러리<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity8.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/16(목)
+                    </p>
+                    <strong class="section__activity-title">위스키 끝판왕, 버번을 만나다</strong>
+                    <p class="section__activity-desc">
+                      버번 위스키 테이스팅 클래스
+                    </p>
+                    <p class="section__activity-space">
+                      쿠킹 라이브러리<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity4.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/08(수)
+                    </p>
+                    <strong class="section__activity-title">여름밤 스위스 여행</strong>
+                    <p class="section__activity-desc">
+                      스위스 전문 가이드 서찬수의 트래블 토크
+                    </p>
+                    <p class="section__activity-space">
+                      트래블 라이브러리<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity3.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/04(토)
+                    </p>
+                    <strong class="section__activity-title">시장 가는 즐거움</strong>
+                    <p class="section__activity-desc">
+                      쿠킹 라이브러리 X 마르쉐 파머스 마켓
+                    </p>
+                    <p class="section__activity-space">
+                      쿠킹 라이브러리
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <button type="button" class="btn-more-activity">
+                더 보기<i class="fas fa-plus"></i>
+              </button>
+            </article>
+            <article class="section__place">
+              <h3 class="section__sub-title">가회</h3>
+              <div class="section__cnt-wrap">
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity7.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/15(수) ~ 07/21(화)
+                    </p>
+                    <strong class="section__activity-title">듀스 한정판 LP 리마스터링 버전</strong>
+                    <p class="section__activity-desc">Limited Vinyl Club</p>
+                    <p class="section__activity-space">
+                      바이닐앤플라스틱<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity6.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/15(수) ~ 10/11(일)
+                    </p>
+                    <strong class="section__activity-title">Lucky DIVE 오스제미오스 인증샷!</strong>
+                    <p class="section__activity-desc">
+                      전시 인증샷 보여주고 선물뽑자!
+                    </p>
+                    <p class="section__activity-space">
+                      스토리지
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity5.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/15(수) ~ 10/11(일)
+                    </p>
+                    <strong class="section__activity-title">초현실적 환상 세계로의 초대</strong>
+                    <p class="section__activity-desc">
+                      오스제미오스 국내 최초 개인전 오픈
+                    </p>
+                    <p class="section__activity-space">
+                      스토리지<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <img src="images/main/activity7.jpg" alt="" />
+                    <p class="section__activity-period">
+                      07/15(수) ~ 07/21(화)
+                    </p>
+                    <strong class="section__activity-title">듀스 한정판 LP 리마스터링 버전</strong>
+                    <p class="section__activity-desc">Limited Vinyl Club</p>
+                    <p class="section__activity-space">
+                      바이닐앤플라스틱<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <button type="button" class="btn-more-activity">
+                더 보기<i class="fas fa-plus"></i>
+              </button>
+            </article>
+          </div>
+        </section>
       </div>
-      <footer id="footer">
-        <img
-          src="images/common/logo-hdcard.svg"
-          alt="현대카드"
-          class="footer__logo"
-        />
-        <div class="footer__info">
-          <address>서울특별시 영등포구 의사당대로3 현대캐피탈빌딩</address>
-          <p>대표이사 정태영</p>
-          <p>사업자등록번호 213-86-15419</p>
-        </div>
-        <p>&copy; HYUNDAI CARD Corp.</p>
-      </footer>
-
-      <a href="#header" class="btn__top"
-        ><img src="images/common/btn-top.png" alt="상단으로 이동"
-      /></a>
     </div>
-  </body>
+    <footer id="footer">
+      <img src="images/common/logo-hdcard.svg" alt="현대카드" class="footer__logo" />
+      <div class="footer__info">
+        <address>서울특별시 영등포구 의사당대로3 현대캐피탈빌딩</address>
+        <p>대표이사 정태영</p>
+        <p>사업자등록번호 213-86-15419</p>
+      </div>
+      <p>&copy; HYUNDAI CARD Corp.</p>
+    </footer>
+
+    <a href="#header" class="btn__top"><img src="images/common/btn-top.png" alt="상단으로 이동" /></a>
+  </div>
+
+  <!-- <script src="js/culture.js"></script> -->
+</body>
+
 </html>

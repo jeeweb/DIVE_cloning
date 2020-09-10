@@ -1,661 +1,520 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <title>현대카드 DIVE</title>
-  </head>
-  <body>
-    <div id="wrap">
-      <header id="header">
-        <div class="header__nav">
-          <h1 class="header__logo">
-            <a href="index.html" class="header__logo-link"
-              ><img src="images/common/logo-dive-b.svg" alt=""
-            /></a>
-          </h1>
-          <nav id="gnb">
-            <ul class="lst-gnb">
-              <li class="lst-gnb__item">
-                <a href="culture.html" class="lst-gnb__item-link">
-                  <span class="lst-gnb__item-txt">What's on</span>
-                </a>
-              </li>
-              <li class="lst-gnb__item">
-                <a href="#" class="lst-gnb__item-link">
-                  <span class="lst-gnb__item-txt">Space</span>
-                  <img
-                    src="images/common/ico-arr-b.svg"
-                    alt="서브메뉴보기"
-                    class="icon-arrow"
-                  />
-                </a>
-                <ul class="lst-gnb-sub">
-                  <li class="lst-gnb-sub__item">
-                    <a
-                      href="design-library.html"
-                      class="lst-gnb-sub__item-link"
-                    >
-                      <span class="lst-gnb-sub__item-txt">DESIGN LIBRARY</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">TRAVEL LIBRARY</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">MUSIC LIBRARY</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">COOKING LIBRARY</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">UNDERSTAGE</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">VINYL & PLASTIC</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">STORAGE</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="lst-gnb__item">
-                <a href="#" class="lst-gnb__item-link">
-                  <span class="lst-gnb__item-txt">Culture</span>
-                  <img
-                    src="images/common/ico-arr-b.svg"
-                    alt="서브메뉴보기"
-                    class="icon-arrow"
-                  />
-                </a>
-                <ul class="lst-gnb-sub">
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">SUPER CONCERT</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">DAVINCI MOTEL</span>
-                    </a>
-                  </li>
-                  <li class="lst-gnb-sub__item">
-                    <a href="#" class="lst-gnb-sub__item-link">
-                      <span class="lst-gnb-sub__item-txt">CURTURE PROJECT</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="lst-gnb__item">
-                <a href="#" class="lst-gnb__item-link">
-                  <span class="lst-gnb__item-txt">Post</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <a href="#" class="btn__search"
-          ><img src="images/common/ico-search-b.svg" alt="검색"
-        /></a>
-        <div class="header__search">
-          <form>
-            <input type="text" placeholder="검색어를 입력해 주세요" />
-            <button type="button" class="btn__cancle"></button>
-            <button class="search-btn__search">
-              <img src="images/common/ico-search-b.svg" alt="검색" />
-            </button>
-          </form>
-          <p class="message__recent-search">최근 검색어 내역이 없습니다.</p>
-          <button type="button" class="btn__close"></button>
-        </div>
-      </header>
 
-      <div id="container">
-        <div class="inner-wrap">
-          <div class="section__group">
-            <section class="section__whats-on">
-              <div class="section__top">
-                <div class="section__top-box">
-                  <h2 class="section__title">What's on</h2>
-                  <p>July 2020</p>
-                </div>
-                <div class="section__top-box">
-                  <ul class="lst-tab whats-on__calendar">
-                    <li class="lst-tab__item today day-off">
-                      <a href="#" class="lst-tab__item-link">
-                        <p class="whats-on__calendar-week">Mon</p>
-                        <p class="whats-on__calendar-date">13</p>
-                      </a>
-                    </li>
-                    <li class="lst-tab__item">
-                      <a href="#" class="lst-tab__item-link">
-                        <p class="whats-on__calendar-week">Tue</p>
-                        <p class="whats-on__calendar-date">14</p>
-                      </a>
-                    </li>
-                    <li class="lst-tab__item">
-                      <a href="#" class="lst-tab__item-link">
-                        <p class="whats-on__calendar-week">Wed</p>
-                        <p class="whats-on__calendar-date">15</p>
-                      </a>
-                    </li>
-                    <li class="lst-tab__item">
-                      <a href="#" class="lst-tab__item-link">
-                        <p class="whats-on__calendar-week">Thu</p>
-                        <p class="whats-on__calendar-date">16</p>
-                      </a>
-                    </li>
-                    <li class="lst-tab__item">
-                      <a href="#" class="lst-tab__item-link">
-                        <p class="whats-on__calendar-week">Fri</p>
-                        <p class="whats-on__calendar-date">17</p>
-                      </a>
-                    </li>
-                    <li class="lst-tab__item">
-                      <a href="#" class="lst-tab__item-link">
-                        <p class="whats-on__calendar-week">Sat</p>
-                        <p class="whats-on__calendar-date">18</p>
-                      </a>
-                    </li>
-                    <li class="lst-tab__item">
-                      <a href="#" class="lst-tab__item-link">
-                        <p class="whats-on__calendar-week week-holiday">Sun</p>
-                        <p class="whats-on__calendar-date">18</p>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="section__top-box">
-                  <a href="#" class="btn-more">
-                    <img src="images/common/ico-arr-title.png" alt="바로가기" />
-                    <p>전체<br />보기</p>
-                  </a>
-                </div>
-              </div>
-              <div class="section__cnt">
-                <div class="section__cnt-wrap">
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <p class="section__activity-period">07/24(금)</p>
-                      <strong class="section__activity-title"
-                        >낯선 곳에<br />나를 잠시<br />묶어둔 여름</strong
-                      >
-                      <p class="section__activity-desc">
-                        여름밤, 이병률 작가의 시 낭독회
-                      </p>
-                      <p class="section__activity-space">
-                        트래블 라이브러리<span
-                          class="section__activity-reservation"
-                          >예매</span
-                        >
-                      </p>
-                    </div>
-                    <div class="section__activity-img">
-                      <img src="images/main/activity9.jpg" alt="" />
-                      <span class="section__activity-location">청담</span>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <p class="section__activity-period">07/16(목)</p>
-                      <strong class="section__activity-title"
-                        >위스키 끝파왕,<br />버번을 만나다</strong
-                      >
-                      <p class="section__activity-desc">
-                        버번 위스키 테이스팅 클래스
-                      </p>
-                      <p class="section__activity-space">
-                        쿠킹 라이브러리<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                    <div class="section__activity-img">
-                      <img src="images/main/activity8.jpg" alt="" />
-                      <span class="section__activity-location">청담</span>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <p class="section__activity-period">
-                        07/15(수) ~ 07/21(화)
-                      </p>
-                      <strong class="section__activity-title"
-                        >듀스 한정판 LP<br />리마스터링 버전</strong
-                      >
-                      <p class="section__activity-desc">Limited Vinyl Club</p>
-                      <p class="section__activity-space">
-                        바이닐앤플라스틱<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                    <div class="section__activity-img">
-                      <img src="images/main/activity7.jpg" alt="" />
-                      <span class="section__activity-location">이태원</span>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <p class="section__activity-period">
-                        07/15(수) ~ 10/11(일)
-                      </p>
-                      <strong class="section__activity-title"
-                        >Lucky DIVE<br />오스제미오스 인증샷!</strong
-                      >
-                      <p class="section__activity-desc">
-                        전시 인증샷 보여주고 선물 뽑자!
-                      </p>
-                      <p class="section__activity-space">스토리지</p>
-                    </div>
-                    <div class="section__activity-img">
-                      <img src="images/main/activity6.jpg" alt="" />
-                      <span class="section__activity-location">이태원</span>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <p class="section__activity-period">
-                        07/15(수) ~ 10/11(일)
-                      </p>
-                      <strong class="section__activity-title"
-                        >초현실적 환상<br />세계로의 초대</strong
-                      >
-                      <p class="section__activity-desc">
-                        오스제미오스 국내 최초 개인전 오픈!
-                      </p>
-                      <p class="section__activity-space">
-                        스토리지<span class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                    <div class="section__activity-img">
-                      <img src="images/main/activity5.jpg" alt="" />
-                      <span class="section__activity-location">이태원</span>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <p class="section__activity-period">07/08(수)</p>
-                      <strong class="section__activity-title"
-                        >여름밤<br />스위스 여행</strong
-                      >
-                      <p class="section__activity-desc">
-                        스위스 전문 가이드 서찬수의 트래블 토크
-                      </p>
-                      <p class="section__activity-space">
-                        트래블 라이브러리<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                    <div class="section__activity-img">
-                      <img src="images/main/activity4.jpg" alt="" />
-                      <span class="section__activity-location">청담</span>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <p class="section__activity-period">07/04(토)</p>
-                      <strong class="section__activity-title"
-                        >시장 가는<br />즐거움</strong
-                      >
-                      <p class="section__activity-desc">
-                        쿠킹 라이브러리 X 마르쉐 파머스 마켓
-                      </p>
-                      <p class="section__activity-space">쿠킹 라이브러리</p>
-                    </div>
-                    <div class="section__activity-img">
-                      <img src="images/main/activity3.jpg" alt="" />
-                      <span class="section__activity-location">청담</span>
-                    </div>
-                  </a>
-                  <a href="#" class="section__activity">
-                    <div class="section__activity-info">
-                      <p class="section__activity-period">06/25(목)</p>
-                      <strong class="section__activity-title"
-                        >글자에 시나리오를<br />담는<br />방법</strong
-                      >
-                      <p class="section__activity-desc">
-                        디자인 라이브러리 Talk 28. 프로파간다
-                      </p>
-                      <p class="section__activity-space">
-                        디자인 라이브러리<span
-                          class="section__activity-reservation"
-                          >예약</span
-                        >
-                      </p>
-                    </div>
-                    <div class="section__activity-img">
-                      <img src="images/main/activity2.jpg" alt="" />
-                      <span class="section__activity-location">청담</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </section>
-            <section class="section__space-culture">
-              <div class="section__top">
-                <h2 class="section__title">현대카드<br />Space ・ Culture</h2>
-              </div>
-              <div class="section__cnt">
-                <div class="section__cnt-box">
-                  <strong class="section__cnt-title">Space</strong>
-                  <ul class="lst-space">
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-dl.svg"
-                          alt="design library"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-dl-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-tl.svg"
-                          alt="Travel Library"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-tl-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-ml.svg"
-                          alt="Music Library"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-ml-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-cl.svg"
-                          alt="Cooking Library"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-cl-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-ud.svg"
-                          alt="Understage"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-ud-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-vp.svg"
-                          alt="Vinyl & Plastic"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-vp-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-st.svg"
-                          alt="Storage"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-st-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="section__cnt-box">
-                  <strong class="section__cnt-title">Culture</strong>
-                  <ul class="lst-space">
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-sc.svg"
-                          alt="Super Concert"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-sc-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-cp.svg"
-                          alt="Culture Project"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-cp-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                    <li class="lst-space__item">
-                      <a href="#" class="lst-space__link">
-                        <img
-                          src="images/common/logo-menu-dm.svg"
-                          alt="Davinci Motel"
-                          class="img__logo-dark"
-                        />
-                        <img
-                          src="images/common/logo-menu-dm-w.svg"
-                          alt=""
-                          class="img__logo-white"
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-          </div>
-          <section class="section__post">
-            <div class="section__top">
-              <h2 class="section__title">Post</h2>
-              <a href="#" class="btn-more">
-                <span>전체보기</span>
-                <img src="images/common/ico-arr-title.png" alt="바로가기" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/common/favicon.ico">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>현대카드 DIVE</title>
+</head>
+
+<body id="main">
+  <div id="wrap">
+    <header id="header">
+      <div class="header__nav">
+        <h1 class="header__logo">
+          <a href="index.html" class="header__logo-link"><img src="images/common/logo-dive-b.svg" alt="" /></a>
+        </h1>
+        <nav id="gnb">
+          <ul class="lst-gnb">
+            <li class="lst-gnb__item">
+              <a href="culture.html" class="lst-gnb__item-link">
+                <span class="lst-gnb__item-txt">What's on</span>
               </a>
+            </li>
+            <li class="lst-gnb__item">
+              <a href="#" class="lst-gnb__item-link">
+                <span class="lst-gnb__item-txt">Space</span>
+                <img src="images/common/ico-arr-b.svg" alt="서브메뉴보기" class="icon-arrow" />
+              </a>
+              <ul class="lst-gnb-sub">
+                <li class="lst-gnb-sub__item">
+                  <a href="design-library.html" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">DESIGN LIBRARY</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">TRAVEL LIBRARY</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">MUSIC LIBRARY</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">COOKING LIBRARY</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">UNDERSTAGE</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">VINYL & PLASTIC</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">STORAGE</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="lst-gnb__item">
+              <a href="#" class="lst-gnb__item-link">
+                <span class="lst-gnb__item-txt">Culture</span>
+                <img src="images/common/ico-arr-b.svg" alt="서브메뉴보기" class="icon-arrow" />
+              </a>
+              <ul class="lst-gnb-sub">
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">SUPER CONCERT</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">DAVINCI MOTEL</span>
+                  </a>
+                </li>
+                <li class="lst-gnb-sub__item">
+                  <a href="#" class="lst-gnb-sub__item-link">
+                    <span class="lst-gnb-sub__item-txt">CURTURE PROJECT</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="lst-gnb__item">
+              <a href="#" class="lst-gnb__item-link">
+                <span class="lst-gnb__item-txt">Post</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <a href="#" class="btn__search"><img src="images/common/ico-search-b.svg" alt="검색" /></a>
+      <div class="header__search">
+        <form>
+          <input type="text" placeholder="검색어를 입력해 주세요" />
+          <button type="button" class="btn__cancle"></button>
+          <button class="search-btn__search">
+            <img src="images/common/ico-search-b.svg" alt="검색" />
+          </button>
+        </form>
+        <p class="message__recent-search">최근 검색어 내역이 없습니다.</p>
+        <button type="button" class="btn__close"></button>
+      </div>
+    </header>
+
+    <div id="container">
+      <div class="inner-wrap">
+        <div class="section__group">
+          <section class="section__whats-on">
+            <div class="section__top">
+              <div class="section__top-box">
+                <h2 class="section__title">What's on</h2>
+                <p class="section__title-month"></p>
+              </div>
+              <div class="section__top-box">
+                <ul class="lst-tab whats-on__calendar">
+                  <li class="lst-tab__item day-off">
+                    <a href="#" class="lst-tab__item-link">
+                      <p class="whats-on__calendar-week">Mon</p>
+                      <p class="whats-on__calendar-date">13</p>
+                    </a>
+                  </li>
+                  <li class="lst-tab__item">
+                    <a href="#" class="lst-tab__item-link">
+                      <p class="whats-on__calendar-week">Tue</p>
+                      <p class="whats-on__calendar-date">14</p>
+                    </a>
+                  </li>
+                  <li class="lst-tab__item">
+                    <a href="#" class="lst-tab__item-link">
+                      <p class="whats-on__calendar-week">Wed</p>
+                      <p class="whats-on__calendar-date">15</p>
+                    </a>
+                  </li>
+                  <li class="lst-tab__item">
+                    <a href="#" class="lst-tab__item-link">
+                      <p class="whats-on__calendar-week">Thu</p>
+                      <p class="whats-on__calendar-date">16</p>
+                    </a>
+                  </li>
+                  <li class="lst-tab__item">
+                    <a href="#" class="lst-tab__item-link">
+                      <p class="whats-on__calendar-week">Fri</p>
+                      <p class="whats-on__calendar-date">17</p>
+                    </a>
+                  </li>
+                  <li class="lst-tab__item">
+                    <a href="#" class="lst-tab__item-link">
+                      <p class="whats-on__calendar-week">Sat</p>
+                      <p class="whats-on__calendar-date">18</p>
+                    </a>
+                  </li>
+                  <li class="lst-tab__item">
+                    <a href="#" class="lst-tab__item-link">
+                      <p class="whats-on__calendar-week week-holiday">Sun</p>
+                      <p class="whats-on__calendar-date">18</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="section__top-box">
+                <a href="#" class="btn-more">
+                  <img src="images/common/ico-arr-title.png" alt="바로가기" />
+                  <p>전체<br />보기</p>
+                </a>
+              </div>
             </div>
             <div class="section__cnt">
-              <a href="#" class="section__cnt-box">
-                <img src="images/main/post1.jpg" alt="" />
-                <span class="section__post-category">여행</span>
-                <strong class="section__post-title">파도가 나를 부른다</strong>
-                <p class="section__post-desc">프립 버스 타고 고성 서핑 여행</p>
-              </a>
-              <a href="#" class="section__cnt-box">
-                <img src="images/main/post2.jpg" alt="" />
-                <span class="section__post-category">쿠킹•고메</span>
-                <strong class="section__post-title"
-                  >이모 여기 맛난걸로요!</strong
-                >
-                <p class="section__post-desc">술맛 나는 안주 맛집</p>
-              </a>
-              <a href="#" class="section__cnt-box">
-                <img src="images/main/post3.jpg" alt="" />
-                <span class="section__post-category">음악</span>
-                <strong class="section__post-title"
-                  >1990년대 뉴트로 놀이</strong
-                >
-                <p class="section__post-desc">
-                  멜론 DJ멜군의 뉴트로 플레이리스트
-                </p>
-              </a>
-              <a href="#" class="section__cnt-box">
-                <img src="images/main/post4.jpg" alt="" />
-                <span class="section__post-category">디자인•아트</span>
-                <strong class="section__post-title">트래쉬 버스터즈</strong>
-                <p class="section__post-desc">전은경의 '요즘 괜찮은 디자인'</p>
-              </a>
+              <div class="section__cnt-wrap">
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <p class="section__activity-period">07/24(금)</p>
+                    <strong class="section__activity-title">낯선 곳에<br />나를 잠시<br />묶어둔 여름</strong>
+                    <p class="section__activity-desc">
+                      여름밤, 이병률 작가의 시 낭독회
+                    </p>
+                    <p class="section__activity-space">
+                      트래블 라이브러리<span class="section__activity-reservation">예매</span>
+                    </p>
+                  </div>
+                  <div class="section__activity-img">
+                    <img src="images/main/activity9.jpg" alt="" />
+                    <span class="section__activity-location">청담</span>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <p class="section__activity-period">07/16(목)</p>
+                    <strong class="section__activity-title">위스키 끝파왕,<br />버번을 만나다</strong>
+                    <p class="section__activity-desc">
+                      버번 위스키 테이스팅 클래스
+                    </p>
+                    <p class="section__activity-space">
+                      쿠킹 라이브러리<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                  <div class="section__activity-img">
+                    <img src="images/main/activity8.jpg" alt="" />
+                    <span class="section__activity-location">청담</span>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <p class="section__activity-period">
+                      07/15(수) ~ 07/21(화)
+                    </p>
+                    <strong class="section__activity-title">듀스 한정판 LP<br />리마스터링 버전</strong>
+                    <p class="section__activity-desc">Limited Vinyl Club</p>
+                    <p class="section__activity-space">
+                      바이닐앤플라스틱<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                  <div class="section__activity-img">
+                    <img src="images/main/activity7.jpg" alt="" />
+                    <span class="section__activity-location">이태원</span>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <p class="section__activity-period">
+                      07/15(수) ~ 10/11(일)
+                    </p>
+                    <strong class="section__activity-title">Lucky DIVE<br />오스제미오스 인증샷!</strong>
+                    <p class="section__activity-desc">
+                      전시 인증샷 보여주고 선물 뽑자!
+                    </p>
+                    <p class="section__activity-space">스토리지</p>
+                  </div>
+                  <div class="section__activity-img">
+                    <img src="images/main/activity6.jpg" alt="" />
+                    <span class="section__activity-location">이태원</span>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <p class="section__activity-period">
+                      07/15(수) ~ 10/11(일)
+                    </p>
+                    <strong class="section__activity-title">초현실적 환상<br />세계로의 초대</strong>
+                    <p class="section__activity-desc">
+                      오스제미오스 국내 최초 개인전 오픈!
+                    </p>
+                    <p class="section__activity-space">
+                      스토리지<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                  <div class="section__activity-img">
+                    <img src="images/main/activity5.jpg" alt="" />
+                    <span class="section__activity-location">이태원</span>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <p class="section__activity-period">07/08(수)</p>
+                    <strong class="section__activity-title">여름밤<br />스위스 여행</strong>
+                    <p class="section__activity-desc">
+                      스위스 전문 가이드 서찬수의 트래블 토크
+                    </p>
+                    <p class="section__activity-space">
+                      트래블 라이브러리<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                  <div class="section__activity-img">
+                    <img src="images/main/activity4.jpg" alt="" />
+                    <span class="section__activity-location">청담</span>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <p class="section__activity-period">07/04(토)</p>
+                    <strong class="section__activity-title">시장 가는<br />즐거움</strong>
+                    <p class="section__activity-desc">
+                      쿠킹 라이브러리 X 마르쉐 파머스 마켓
+                    </p>
+                    <p class="section__activity-space">쿠킹 라이브러리</p>
+                  </div>
+                  <div class="section__activity-img">
+                    <img src="images/main/activity3.jpg" alt="" />
+                    <span class="section__activity-location">청담</span>
+                  </div>
+                </a>
+                <a href="#" class="section__activity">
+                  <div class="section__activity-info">
+                    <p class="section__activity-period">06/25(목)</p>
+                    <strong class="section__activity-title">글자에 시나리오를<br />담는<br />방법</strong>
+                    <p class="section__activity-desc">
+                      디자인 라이브러리 Talk 28. 프로파간다
+                    </p>
+                    <p class="section__activity-space">
+                      디자인 라이브러리<span class="section__activity-reservation">예약</span>
+                    </p>
+                  </div>
+                  <div class="section__activity-img">
+                    <img src="images/main/activity2.jpg" alt="" />
+                    <span class="section__activity-location">청담</span>
+                  </div>
+                </a>
+              </div>
             </div>
           </section>
-          <section class="section__event">
+          <section class="section__space-culture">
             <div class="section__top">
-              <h2 class="section__title">Event</h2>
-              <a href="#" class="btn-more">
-                <span>전체보기</span>
-                <img src="images/common/ico-arr-title.png" alt="바로가기" />
-              </a>
+              <h2 class="section__title">현대카드<br />Space ・ Culture</h2>
             </div>
             <div class="section__cnt">
-              <a href="#" class="section__cnt-box">
-                <p class="section__event-desc">
-                  <strong class="section__event-title"
-                    >듀스 한정판 LP 리마스터링 버전</strong
-                  >
-                  Limited Vinyl Club
-                </p>
-              </a>
-              <a href="#" class="section__cnt-box">
-                <p class="section__event-desc">
-                  <strong class="section__event-title"
-                    >DIVE 로고 내 취향 컬러는?</strong
-                  >
-                  DIVER의 선택 #로고컬러
-                </p>
-              </a>
+              <div class="section__cnt-box">
+                <strong class="section__cnt-title">Space</strong>
+                <ul class="lst-space">
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-dl.svg" alt="design library" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-dl-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-tl.svg" alt="Travel Library" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-tl-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-ml.svg" alt="Music Library" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-ml-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-cl.svg" alt="Cooking Library" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-cl-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-ud.svg" alt="Understage" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-ud-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-vp.svg" alt="Vinyl & Plastic" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-vp-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-st.svg" alt="Storage" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-st-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="section__cnt-box">
+                <strong class="section__cnt-title">Culture</strong>
+                <ul class="lst-space">
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-sc.svg" alt="Super Concert" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-sc-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-cp.svg" alt="Culture Project" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-cp-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                  <li class="lst-space__item">
+                    <a href="#" class="lst-space__link">
+                      <img src="images/common/logo-menu-dm.svg" alt="Davinci Motel" class="img__logo-dark" />
+                      <img src="images/common/logo-menu-dm-w.svg" alt="" class="img__logo-white" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </section>
-          <section class="section__notice">
-            <div class="section__top">
-              <h2 class="section__title">Notice</h2>
-              <a href="#" class="btn-more">
-                <span>전체보기</span>
-                <img src="images/common/ico-arr-title.png" alt="바로가기" />
-              </a>
-            </div>
-            <ul class="section__cnt">
-              <li class="section__cnt-box">
-                <a href="#">
-                  <strong class="section__notice-title"
-                    >7월 23일 휴관 안내드립니다.</strong
-                  >
-                  <p class="section__notice-desc">
-                    2020. 07. 23 (목) 내부 행사 진행으로 현대카드 디자인
-                    라이브러리 휴관 하오니 양해 부탁 드립니다. <br />현대카드의
-                    다른 Space들은 모두 정상 운영됩니다.
-                  </p>
-                  <span class="section__notice-date">2020.07.13</span>
-                </a>
-              </li>
-              <li class="section__cnt-box">
-                <a href="#">
-                  <strong class="section__notice-title"
-                    >코로나19로 인한 Space 단축 운영 안내 드립니다.</strong
-                  >
-                  <p class="section__notice-desc">
-                    코로나19 확산에 따라 현대카드 Space 운영시간이 단축 되오니
-                    이용에 참고하여 주시기 바랍니다.<br />- 단축 운영 기간:
-                    2020. 05. 30(토) ~ 2020. 06. 14(일)<br />- 단축 운영 시간:
-                    화-일요일 12시 ~ 18시<br />- 대상 공간 : 현대카드 Space 전체
-                    공간<br />(디자인/트래블/뮤직/쿠킹 라이브러리, Understage,
-                    Vinyl & Plastic, Storage)<br />각 Space별 프로그램 진행
-                    여부는 홈페이지 또는 문의 전화를 통해 확인하여 주시기
-                    바랍니다.
-                  </p>
-                  <span class="section__notice-date">2020.06.01</span>
-                </a>
-              </li>
-            </ul>
           </section>
         </div>
-        <section class="section__download">
-          <img src="images/main/ico-dive-app.png" alt="DIVE App" />
-          <p class="section__download-title">
-            취향을 업데이트하는 힙스터들의 필수 앱
-          </p>
-          <div class="section__download-market">
-            <a href="#" class="section__download-ios">
-              <span class="section__download-icon"></span>
-              <span>App Store</span>
+        <section class="section__post">
+          <div class="section__top">
+            <h2 class="section__title">Post</h2>
+            <a href="#" class="btn-more">
+              <span>전체보기</span>
+              <img src="images/common/ico-arr-title.png" alt="바로가기" />
             </a>
-            <a href="#" class="section__download-google">
-              <span class="section__download-icon"></span>
-              <span>Google Play</span>
+          </div>
+          <div class="section__cnt">
+            <a href="#" class="section__cnt-box">
+              <img src="images/main/post1.jpg" alt="" />
+              <span class="section__post-category">여행</span>
+              <strong class="section__post-title">파도가 나를 부른다</strong>
+              <p class="section__post-desc">프립 버스 타고 고성 서핑 여행</p>
+            </a>
+            <a href="#" class="section__cnt-box">
+              <img src="images/main/post2.jpg" alt="" />
+              <span class="section__post-category">쿠킹•고메</span>
+              <strong class="section__post-title">이모 여기 맛난걸로요!</strong>
+              <p class="section__post-desc">술맛 나는 안주 맛집</p>
+            </a>
+            <a href="#" class="section__cnt-box">
+              <img src="images/main/post3.jpg" alt="" />
+              <span class="section__post-category">음악</span>
+              <strong class="section__post-title">1990년대 뉴트로 놀이</strong>
+              <p class="section__post-desc">
+                멜론 DJ멜군의 뉴트로 플레이리스트
+              </p>
+            </a>
+            <a href="#" class="section__cnt-box">
+              <img src="images/main/post4.jpg" alt="" />
+              <span class="section__post-category">디자인•아트</span>
+              <strong class="section__post-title">트래쉬 버스터즈</strong>
+              <p class="section__post-desc">전은경의 '요즘 괜찮은 디자인'</p>
             </a>
           </div>
         </section>
+        <section class="section__event">
+          <div class="section__top">
+            <h2 class="section__title">Event</h2>
+            <a href="#" class="btn-more">
+              <span>전체보기</span>
+              <img src="images/common/ico-arr-title.png" alt="바로가기" />
+            </a>
+          </div>
+          <div class="section__cnt">
+            <a href="#" class="section__cnt-box">
+              <p class="section__event-desc">
+                <strong class="section__event-title">듀스 한정판 LP 리마스터링 버전</strong>
+                Limited Vinyl Club
+              </p>
+            </a>
+            <a href="#" class="section__cnt-box">
+              <p class="section__event-desc">
+                <strong class="section__event-title">DIVE 로고 내 취향 컬러는?</strong>
+                DIVER의 선택 #로고컬러
+              </p>
+            </a>
+          </div>
+        </section>
+        <section class="section__notice">
+          <div class="section__top">
+            <h2 class="section__title">Notice</h2>
+            <a href="#" class="btn-more">
+              <span>전체보기</span>
+              <img src="images/common/ico-arr-title.png" alt="바로가기" />
+            </a>
+          </div>
+          <ul class="section__cnt">
+            <li class="section__cnt-box">
+              <a href="#">
+                <strong class="section__notice-title">7월 23일 휴관 안내드립니다.</strong>
+                <p class="section__notice-desc">
+                  2020. 07. 23 (목) 내부 행사 진행으로 현대카드 디자인
+                  라이브러리 휴관 하오니 양해 부탁 드립니다. <br />현대카드의
+                  다른 Space들은 모두 정상 운영됩니다.
+                </p>
+                <span class="section__notice-date">2020.07.13</span>
+              </a>
+            </li>
+            <li class="section__cnt-box">
+              <a href="#">
+                <strong class="section__notice-title">코로나19로 인한 Space 단축 운영 안내 드립니다.</strong>
+                <p class="section__notice-desc">
+                  코로나19 확산에 따라 현대카드 Space 운영시간이 단축 되오니
+                  이용에 참고하여 주시기 바랍니다.<br />- 단축 운영 기간:
+                  2020. 05. 30(토) ~ 2020. 06. 14(일)<br />- 단축 운영 시간:
+                  화-일요일 12시 ~ 18시<br />- 대상 공간 : 현대카드 Space 전체
+                  공간<br />(디자인/트래블/뮤직/쿠킹 라이브러리, Understage,
+                  Vinyl & Plastic, Storage)<br />각 Space별 프로그램 진행
+                  여부는 홈페이지 또는 문의 전화를 통해 확인하여 주시기
+                  바랍니다.
+                </p>
+                <span class="section__notice-date">2020.06.01</span>
+              </a>
+            </li>
+          </ul>
+        </section>
       </div>
-
-      <footer id="footer">
-        <img
-          src="images/common/logo-hdcard.svg"
-          alt="현대카드"
-          class="footer__logo"
-        />
-        <div class="footer__info">
-          <address>서울특별시 영등포구 의사당대로3 현대캐피탈빌딩</address>
-          <p>대표이사 정태영</p>
-          <p>사업자등록번호 213-86-15419</p>
+      <section class="section__download">
+        <img src="images/main/ico-dive-app.png" alt="DIVE App" />
+        <p class="section__download-title">
+          취향을 업데이트하는 힙스터들의 필수 앱
+        </p>
+        <div class="section__download-market">
+          <a href="#" class="section__download-ios">
+            <span class="section__download-icon"></span>
+            <span>App Store</span>
+          </a>
+          <a href="#" class="section__download-google">
+            <span class="section__download-icon"></span>
+            <span>Google Play</span>
+          </a>
         </div>
-        <p>&copy; HYUNDAI CARD Corp.</p>
-      </footer>
-
-      <a href="#header" class="btn__top"
-        ><img src="images/common/btn-top.png" alt="상단으로 이동"
-      /></a>
+      </section>
     </div>
-  </body>
+
+    <footer id="footer">
+      <img src="images/common/logo-hdcard.svg" alt="현대카드" class="footer__logo" />
+      <div class="footer__info">
+        <address>서울특별시 영등포구 의사당대로3 현대캐피탈빌딩</address>
+        <p>대표이사 정태영</p>
+        <p>사업자등록번호 213-86-15419</p>
+      </div>
+      <p>&copy; HYUNDAI CARD Corp.</p>
+    </footer>
+
+    <a href="#header" class="btn__top"><img src="images/common/btn-top.png" alt="상단으로 이동" /></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
