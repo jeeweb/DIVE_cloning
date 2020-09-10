@@ -1,5 +1,9 @@
 'use strict';
 
+const header = document.querySelector('#header');
+
+let yOffset = 0; 
+
 function getMonthDate() {
   const monthYear = document.querySelector('.section__title-month'),
     dates = document.querySelectorAll('.whats-on__calendar .lst-tab__item'),
@@ -33,8 +37,20 @@ function getMonthDate() {
   
   // today 표기
   dates[week-1].classList.add('today');
-
 }
 getMonthDate();
+
+function borderHeader() {
+  if (yOffset > 0) {
+    header.classList.add('border');
+  } else if (yOffset === 0) {
+    header.classList.remove('border');
+  }
+}
+window.addEventListener('scroll', () => {
+  yOffset = window.pageYOffset
+  //console.log(window.pageYOffset);
+  borderHeader();
+})
 
 

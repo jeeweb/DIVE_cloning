@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+/* header */
+#header.border:after{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #000;
+}
+
 /* container */
 #container .section__group {
   display: flex;
@@ -202,6 +213,7 @@
 
 .section__cnt .section__activity .section__activity-img img {
   height: 100%;
+  max-height: 395px;
   width: auto;
 }
 
