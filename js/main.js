@@ -47,6 +47,7 @@ function borderHeader() {
     header.classList.remove('border');
   }
 }
+
 window.addEventListener('scroll', () => {
   yOffset = window.pageYOffset
   //console.log(window.pageYOffset);

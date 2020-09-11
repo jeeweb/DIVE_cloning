@@ -118,22 +118,91 @@
   width: 20px;
   height: 20px;
 }
-#header .header__search {
+
+/* search */
+.search {
   display: none;
 }
-#header .header__search.header__search--active {
+.search.search--active {
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-
+  background-color: rgba(34, 34, 34, 0.5);
+  z-index: 200;
+}
+.search .search__top{
   height: 386px;
   background: #222;
   color: #fff;
-
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+}
+.search .search__top form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #fff;
+  width: 600px;
+  padding-bottom: 24px;
+}
+.search .search__top form > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.search .search__top form input{
+  font-size: 1.8em;
+  flex-grow: 1;
+}
+.search .search__top form input::placeholder{
+  color: #fff;
+}
+.search .search__top form .btn__delete{
+  display: none;
+  width: 24px;
+  height: 24px;
+  background: url("../images/common/ico-del2-w.svg") no-repeat center / cover;
+  margin-right: 16px;
+}
+.search .search__top form .search-btn__search img{
+  width: 88%;
+}
+.search .search__top .message__recent-search{
+  width: 600px;
+  padding-top: 24px;
+  opacity: 0.4;
+}
+.search .search__btm{
+  display: flex;
+  height: 340px;
+  background: #fff;
+}
+
+.search .btn__close{
+  position: absolute;
+  top: 45px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+}
+.search .btn__close .bar{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  left: 0;
+  transform: rotate(45deg);
+}
+.search .btn__close .bar:first-of-type {
+  right: 0;
+  transform: rotate(-45deg)
 }
 
 /* container */
