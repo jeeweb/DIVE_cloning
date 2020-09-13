@@ -36,11 +36,18 @@ function getMonthDate() {
   }
   
   // today 표기
-  dates[week-1].classList.add('today');
+  if (week === 0) {
+    dates[6].classList.add('today');
+  } else if(week > 0) {
+    dates[week-1].classList.add('today');
+
+  }
 }
 getMonthDate();
 
+// scroll 시 header에 border
 function borderHeader() {
+  //console.log(yOffset)
   if (yOffset > 0) {
     header.classList.add('border');
   } else if (yOffset === 0) {
