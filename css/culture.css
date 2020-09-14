@@ -78,7 +78,8 @@
   display: none;
 }
 
-.whats-on .section__cnt .lst-tab__cnt .monthly-lst__now.none .no-program {
+.whats-on .section__cnt .lst-tab__cnt .monthly-lst__now.none .no-program,
+.whats-on .section__cnt .lst-tab__cnt .monthly-lst__upcoming.none .no-program{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,6 +91,11 @@
   .section__cnt
   .lst-tab__cnt
   .monthly-lst__now.none
+  .section__cnt-wrap::before,
+.whats-on
+  .section__cnt
+  .lst-tab__cnt
+  .monthly-lst__upcoming.none
   .section__cnt-wrap::before {
   height: 0;
 }
