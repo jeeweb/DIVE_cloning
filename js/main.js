@@ -40,7 +40,6 @@ function getMonthDate() {
     dates[6].classList.add('today');
   } else if(week > 0) {
     dates[week-1].classList.add('today');
-
   }
 }
 getMonthDate();

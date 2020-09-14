@@ -220,6 +220,7 @@
 /* 지역 */
 .whats-on .section__cnt .lst-tab__places {
   display: none;
+  flex-direction: column;
 }
 
 .lst-tab__places .section__filter {
@@ -245,6 +246,7 @@
 .section__cnt .section__place .section__activity {
   flex-direction: column;
   justify-content: flex-start;
+  width: 25%;
 }
 .section__cnt .section__place .section__activity + .section__activity {
   margin-left: 1vw;
@@ -265,7 +267,6 @@
 }
 .section__cnt .section__place .section__cnt-wrap {
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .section__cnt .section__place .section__activity img {

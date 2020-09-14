@@ -5,23 +5,42 @@ const whatsOn = document.querySelector('.whats-on'),
     cultureTabBtn = cultureTab.querySelectorAll('.lst-tab__item .lst-tab__item-link'),
     cultureTabCnt = document.querySelectorAll('.lst-tab__cnt');
 
+const eventNow = whatsOn.querySelector('.monthly-lst__now');
+
 // 캘린더/일정 tab
 
-for (let i = 0; i < cultureTabBtn.length; i++) {
-    cultureTabBtn[i].addEventListener('click', (e) => {
-        let tg = e.currentTarget;
-        //let tabNum = cultureTabBtn.indexOf(tg);
-        console.log(tg);
-        for (let j = 0; j < cultureTabCnt.length; j++) {
-            cultureTabCnt[j].style.display = "none";
+cultureTab.addEventListener('click', (e) => {
+    let tg = e.target.parentNode;
+    let tabNum;
+    for(let i = 0; i < cultureTabBtn.length; i++) {
+        if(cultureTabBtn[i] === tg) {
+            tabNum = i;
         }
-        for (let j = 0; j < cultureTabBtn.length; i++) {
-            cultureTabBtn[j].className = cultureTabBtn[j].className.replace(' on', '');
-        }
-        
-        cultureTabCnt[tabNum].style.display = 'block';
-        
-    });
-    
-}
 
+    }
+    for (let i = 0; i < cultureTabCnt.length; i++) {
+        cultureTabCnt[i].style.display = "none";
+    }
+    
+    for (let i = 0; i < cultureTabBtn.length; i++) {
+        cultureTabBtn[i].parentNode.classList.remove('on')
+    }
+    
+    cultureTabBtn[tabNum].parentNode.classList.add('on');
+    cultureTabCnt[tabNum].style.display = 'flex';
+    
+});
+
+
+// 월요일 휴무 -> no program
+function checkMonday() {
+    let today = new Date();
+    let week = today.getDay();
+    
+    if (week === 1) {
+        eventNow.classList.add('none');
+      } else {
+        eventNow.className = 'monthly-lst__now';
+      }
+}
+checkMonday();
