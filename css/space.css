@@ -6,15 +6,28 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-.space__wrapper #header .header--scroll img {
+.space__wrapper #header .header--scroll img.scroll--show {
   display: none;
 }
-.space__wrapper #header .header--scroll img.scroll--show {
+.space__wrapper #header .header--scroll img.scroll--hide {
   display: inline-block;
 }
-.space__wrapper #header .btn__search img.scroll--show {
+.space__wrapper #header .btn__search img {
   width: 100%;
   height: auto;
+}
+
+/* scroll - header  */
+.space__wrapper #header.bg-white{
+  background-color: #fff;
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+.space__wrapper #header.bg-white .header--scroll img.scroll--hide{
+  display: none;
+}
+.space__wrapper #header.bg-white .header--scroll img.scroll--show{
+  display: inline-block;
 }
 
 /* container */
