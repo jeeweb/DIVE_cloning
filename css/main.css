@@ -52,6 +52,10 @@
   line-height: 1.4;
 }
 
+.section__whats-on .section__top .section__top-box:nth-child(3) p > span{
+  display: block;
+}
+
 .section__whats-on .lst-tab__item .lst-tab__item-link {
   display: flex;
   flex-direction: column;
@@ -544,7 +548,7 @@
   background-position: -26px -31px;
 }
 
-@media (max-width: 1290px) {
+@media (max-width: 1290px) and (min-width: 1081px) {
   .section__whats-on .section__cnt {
     height: 688px;
   }
@@ -580,5 +584,83 @@
 
   .section__notice .section__cnt .section__cnt-box + .section__cnt-box {
     margin-left: 5vw;
+  }
+}
+
+
+@media (max-width: 1080px) {
+  #container .section__group {
+    flex-direction: column;
+  }
+
+  #container .section__whats-on {
+    width: 100%;
+    margin-bottom: 186px;
+  }
+
+  #container .section__space-culture {
+    width: 100%;
+  }
+
+  #container .section__space-culture .section__title {
+    font-size: 2rem;
+  }
+  
+  .section__space-culture .section__cnt ul{
+    justify-content: flex-start;
+  }
+  .section__space-culture .section__cnt ul li{
+    width: 18vw;
+    height: 18vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  .section__whats-on .section__top .section__top-box:nth-child(1){
+    text-align: center;
+  }
+
+  .section__whats-on .section__top .section__top-box:nth-child(2) {
+    padding: 24px 0 12px;
+  }
+
+  .section__whats-on .section__top .section__top-box:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .section__whats-on .section__top-box .btn-more img {
+    display: none;
+  }
+  .section__whats-on .section__top .section__top-box:nth-child(3) p > span{
+    display: inline-block;
+  }
+
+  .section__space-culture .section__cnt ul li{
+    width: 26vw;
+  height: 26vw;
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+  }
+  
+  .section__space-culture .section__cnt ul li a img {
+    width: 80px;
+  }
+  
+  .section__cnt .section__cnt-wrap:before{
+    background-color: transparent;
+  }
+  .section__cnt .section__activity {
+    flex-direction: column-reverse;
+  }
+  .section__cnt .section__activity .section__activity-info{
+    padding-left: 0;
+    text-align: center;
+  }
+  .section__cnt .section__activity .section__activity-info:before{
+    background-color: transparent;
   }
 }

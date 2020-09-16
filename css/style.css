@@ -20,7 +20,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
@@ -113,7 +113,6 @@
 }
 
 #header .btn__search {
-  justify-self: self-end;
   display: block;
   width: 20px;
   height: 20px;
@@ -292,5 +291,20 @@
   #container .inner-wrap {
     padding: 200px 30px 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* header */
+  #gnb .lst-gnb{
+    display: none;
+  }
+
+  #container .section__top {
+    flex-direction: column;
+  }
+
+  .btn__top{
+    bottom: 80px;
   }
 }
