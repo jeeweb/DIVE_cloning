@@ -4,12 +4,13 @@
 @import "./culture.css";
 @import "./space.css";
 
-.wrap,
+#wrap,
 .header {
   box-sizing: border-box;
 }
-.wrap {
-  padding: 0 30px;
+#wrap {
+	padding: 0 30px;
+	overflow-x: hidden;
 }
 
 /* header */
@@ -289,19 +290,38 @@
     display: block;
   }
   #container .inner-wrap {
-    padding: 200px 30px 0;
+    padding-top: 200px;
     width: 100%;
   }
 }
 
 @media (max-width: 768px) {
-  /* header */
+	#wrap{
+		padding: 0 20px;
+	}
+	/* header */
+	#header{
+		height: 60px;
+		padding: 0 20px;
+	}
+
   #gnb .lst-gnb{
     display: none;
   }
 
+	/* container */
+
+	#container .inner-wrap{
+		padding-top: 100px;
+	}
+
+	#container .section__title{
+		text-align: center;
+	}
+
   #container .section__top {
-    flex-direction: column;
+		flex-direction: column;
+		padding-bottom: 24px;
   }
 
   .btn__top{
