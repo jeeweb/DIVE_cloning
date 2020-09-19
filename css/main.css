@@ -501,7 +501,8 @@
   width: 100%;
   padding: 70px 0;
   background-color: #ededed;
-  margin-top: 120px;
+	margin-top: 120px;
+	box-sizing: border-box;
 }
 
 .section__download .section__download-title {
@@ -523,7 +524,6 @@
   height: 48px;
   border-radius: 24px;
   background: #fff;
-  /* font-family: 'Noto Sans KR'; */
 }
 
 .section__download .section__download-market .section__download-icon {
@@ -637,6 +637,7 @@
   }
 	.section__top .btn-more{
 		font-size: 1rem;
+		justify-content: center;
 	}
   .section__top .btn-more img {
     display: none;
@@ -729,4 +730,48 @@
 	#container .section__notice{
 		flex-direction: column;
 	}
+	
+	.section__notice .section__cnt{
+		flex-direction: column;
+	}
+	.section__notice .section__cnt .section__cnt-box{
+		width: 100%;
+	}
+	.section__notice .section__cnt .section__cnt-box + .section__cnt-box{
+		margin-left: 0;
+		margin-top: 24px;
+	}
+	.section__notice .section__cnt .section__cnt-box .section__notice-title{
+		font-size: 1rem;
+		height: 36px;
+		border-bottom: 0;
+	}
+	.section__notice .section__cnt .section__cnt-box .section__notice-desc{
+		display: none;
+	}
+	.section__notice .section__cnt .section__cnt-box .section__notice-date{
+		font-size: 0.8rem;
+	}
+
+	/* download */
+	#container .section__download{
+		padding: 32px 20px;
+		margin-top: 80px;
+	}
+	.section__download .section__download-title{
+		text-align: center;
+		font-size: 1.2rem;
+	}
+	.section__download .section__download-market{
+		justify-content: space-between;
+		width: 100%;
+	}
+	.section__download .section__download-market a{
+		width: 42vw;
+		font-size: 0.8rem;
+	}
+	.section__download .section__download-market .section__download-ios{
+		margin-right: 0;
+	}
+
 }
