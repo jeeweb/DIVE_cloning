@@ -41,6 +41,10 @@
   height: 28px;
 }
 
+/* gnb */
+#gnb .btn-nav{
+	display: none;
+}
 #gnb .lst-gnb {
   display: flex;
   padding: 0 18px;
@@ -300,11 +304,41 @@
 	#header{
 		height: 60px;
 		padding: 0 20px;
+		position: relative;
 	}
-
+	.header__logo{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	/* gnb */
   #gnb .lst-gnb{
     display: none;
-  }
+	}
+	#gnb .btn-nav{
+		display: block;
+		position: relative;
+		width: 20px;
+		height: 20px;
+	}
+	#gnb .btn-nav span{
+		position: absolute;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background-color: #000;
+	}
+	#gnb .btn-nav span:nth-child(1){
+		top: 3px;
+	}
+	#gnb .btn-nav span:nth-child(2){
+		top: 9px;
+	}
+	#gnb .btn-nav span:nth-child(3){
+		top: 15px;
+	}
 
 	/* container */
 	#container .inner-wrap{
