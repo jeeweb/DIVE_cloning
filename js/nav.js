@@ -13,8 +13,9 @@ closeNavBtn.addEventListener('click', () => navMobile.classList.remove('nav-mobi
 for (let i = 0; i < navMobileMenu.length; i++) {
 	navMobileMenu[i].addEventListener('click', (e) => {
 		let target = e.currentTarget;
-		console.log(target.childNode)
-		// if(target.childNode)
+		let navSub = target.querySelector('.lst-gnb-sub');
+		if(navSub) target.classList.toggle('on');
+		
 	})
 
 }
