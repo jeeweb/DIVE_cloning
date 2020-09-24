@@ -296,3 +296,38 @@
 .section__cnt .section__place .btn-more-activity i {
   padding-left: 8px;
 }
+
+@media (max-width: 768px) {
+	#container.whats-on .section__top{
+		align-items: center;
+	}
+	#container.whats-on .section__top-box:first-child{
+		margin-bottom: 24px;
+	}
+	.whats-on .section__cnt{
+		margin-top: 36px;
+	}
+	.whats-on .section__cnt .lst-tab__cnt .section__sub-title{
+		text-align: center;
+	}
+
+	.whats-on .section__cnt .lst-tab__calendar{
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.whats-on .section__cnt .lst-tab__cnt .section__monthly-lst{
+		flex: 1;
+		margin-top: 36px;
+	}
+	.whats-on .section__cnt .lst-tab__cnt .section__monthly-calendar{
+		margin-left: 0;
+		width: 80vw;
+	}	
+	#programCalendar .ui-datepicker-calendar tbody td{
+		height: 42px;
+	}
+	#programCalendar .ui-datepicker-calendar .ui-state-default{
+		width: 100%;
+		height: 106%;
+	}
+}
