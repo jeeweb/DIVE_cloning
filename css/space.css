@@ -95,20 +95,21 @@
   .section__top-box:last-child
   .space-info__thumb
   span {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 700;
   margin-right: 16px;
+}
+.space-cnt .section__cnt {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
 }
 
 /* whats's on */
 .space__whats-on {
   margin-bottom: 82px;
 }
-.space-cnt .section__cnt {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
+
 .space__whats-on .section__cnt {
   justify-content: space-evenly;
 }
@@ -128,6 +129,7 @@
   width: 17%;
   box-sizing: border-box;
 }
+
 .space__whats-on .lst__activity .lst__activity-period {
   position: relative;
   padding-bottom: 62px;
@@ -153,7 +155,7 @@
 }
 .space__whats-on .lst__activity .lst__activity-period-link .lst__activity-date {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   color: #000;
 }
 .space-cnt .lst__activity .lst__activity-event .lst__activity-img img {
@@ -161,11 +163,11 @@
 }
 .space__whats-on .lst__activity .lst__activity-event .lst__activity-title {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   padding: 16px 0;
 }
 .space__whats-on .lst__activity .lst__activity-event .lst__activity-desc {
-  font-size: 0.9rem;
+  font-size: 0.9em;
   color: #999;
   padding-bottom: 16px;
 }
@@ -207,4 +209,63 @@
 }
 .space__post .lst__activity {
   width: 23%;
+}
+
+@media (max-width: 768px) {
+	#container.space-cnt > .section__top {
+		text-align: center;
+	}
+	.space-cnt .section__top .inner-wrap .section__top-box{
+		flex-direction: column;
+	}
+	.space-cnt .section__top .inner-wrap .section__top-box:last-child{
+		width: 100vw;
+		justify-content: space-around;
+		padding: 16px 0;
+		font-size: 0.8rem;
+	}
+	.space-cnt .section__top .inner-wrap .section__top-box:last-child .space-info__thumb{
+		margin-right: 0;
+	}
+	.space-cnt .section__cnt{
+		flex-wrap: wrap;
+	}
+	.space__whats-on{
+		margin-top: 24px;
+		margin-bottom: 42px;
+	}
+	.space__whats-on .section__cnt{
+		justify-content: space-between;
+	}
+	.space__whats-on .section__cnt:before{
+		width: 0;
+	}
+	.space-cnt .lst__activity{
+		width: 48%;
+		margin-bottom: 24px;
+	}
+	.space__whats-on .lst__activity .lst__activity-period{
+		padding-bottom: 8px;
+	}
+	.space__whats-on .lst__activity .lst__activity-period:after{
+		background: transparent;
+	}
+	.space__whats-on .lst__activity .lst__activity-event{
+		font-size: 0.9em;
+	}
+	.space__whats-on .lst__activity .lst__activity-event .lst__activity-title{
+		padding: 8px 0;
+	}
+	.space__whats-on .lst__activity .lst__activity-event .lst__activity-desc{
+		padding-bottom: 6px;
+	}
+
+	/* experience */
+	.space__experience .section__cnt{
+		flex-direction: column;
+	}
+	.space__experience .lst__activity{
+		width: 100%;
+		text-align: center;
+	}
 }
