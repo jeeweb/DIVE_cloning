@@ -202,9 +202,20 @@
   padding-top: 5px;
 }
 #programCalendar .ui-datepicker-calendar .ui-datepicker-today .ui-state-active {
-  border: 1px solid #000;
-  border-radius: 50%;
+	position: relative;
 }
+#programCalendar .ui-datepicker-calendar .ui-datepicker-today .ui-state-active:after{
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	border: 1px solid #000;
+}
+
 #programCalendar .ui-datepicker-calendar td.eventday:after {
   content: "";
   position: absolute;
@@ -266,7 +277,7 @@
   height: 0;
 }
 .section__cnt .section__place .section__cnt-wrap {
-  flex-direction: row;
+	flex-direction: row;
 }
 
 .section__cnt .section__place .section__activity img {
@@ -305,7 +316,7 @@
 		margin-bottom: 24px;
 	}
 	.whats-on .section__cnt{
-		margin-top: 36px;
+		margin-top: 24px;
 	}
 	.whats-on .section__cnt .lst-tab__cnt .section__sub-title{
 		text-align: center;
@@ -323,11 +334,47 @@
 		margin-left: 0;
 		width: 80vw;
 	}	
+	#programCalendar .ui-datepicker-header{
+		margin-bottom: 16px;
+	}
+	#programCalendar .ui-datepicker-header .ui-datepicker-title{
+		font-size: 1.6rem;
+	}
 	#programCalendar .ui-datepicker-calendar tbody td{
 		height: 42px;
 	}
 	#programCalendar .ui-datepicker-calendar .ui-state-default{
 		width: 100%;
 		height: 106%;
+	}
+
+	.whats-on .section__cnt .section__activity{
+		margin-bottom: 32px;
+	}
+	.whats-on .section__cnt .section__activity .section__activity-img{
+		height: auto;
+	}
+	.whats-on .section__cnt .section__activity .section__activity-info .section__activity-title{
+		padding: 8px 0;
+	}
+	.whats-on .section__cnt .section__activity .section__activity-info .section__activity-desc{
+		padding-bottom: 8px;
+	}
+	.lst-tab__places .section__place{
+		padding-top: 24px;
+	}
+	.whats-on .lst-tab__places .section__place .section__sub-title{
+		align-self: center;
+		margin-bottom: 10px;
+	}
+	.section__cnt .section__place .section__cnt-wrap{
+		flex-wrap: wrap;
+	}
+	.section__cnt .section__place .section__activity{
+		width: 100%;
+		
+	}
+	.section__cnt .section__place .section__activity + .section__activity{
+		margin-left: 0;
 	}
 }
